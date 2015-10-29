@@ -111,6 +111,19 @@
     </message>
 </context>
 <context>
+    <name>VListView</name>
+    <message>
+        <location filename="../assets/VListView.qml" line="62"/>
+        <source>Error occurred, %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/VListView.qml" line="67"/>
+        <source>Server unreachable</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>main</name>
     <message>
         <location filename="../assets/main.qml" line="40"/>
@@ -118,48 +131,35 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="68"/>
+        <location filename="../assets/main.qml" line="80"/>
         <source>Featured</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="72"/>
+        <location filename="../assets/main.qml" line="84"/>
         <source>Hot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="76"/>
+        <location filename="../assets/main.qml" line="88"/>
         <source>Trending</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../assets/main.qml" line="129"/>
-        <location filename="../assets/main.qml" line="234"/>
-        <location filename="../assets/main.qml" line="339"/>
-        <source>Error occurred, %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../assets/main.qml" line="134"/>
-        <location filename="../assets/main.qml" line="239"/>
-        <location filename="../assets/main.qml" line="344"/>
-        <source>Server unreachable</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../assets/main.qml" line="179"/>
-        <location filename="../assets/main.qml" line="284"/>
-        <location filename="../assets/main.qml" line="389"/>
+        <location filename="../assets/main.qml" line="171"/>
+        <location filename="../assets/main.qml" line="213"/>
         <source>Loading...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="408"/>
+        <location filename="../assets/main.qml" line="61"/>
+        <location filename="../assets/main.qml" line="233"/>
         <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="418"/>
+        <location filename="../assets/main.qml" line="243"/>
         <source>Nearby</source>
         <translation type="unfinished"></translation>
     </message>

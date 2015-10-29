@@ -41,6 +41,7 @@ config_pri_assets {
         $$quote($$BASEDIR/assets/NearbyView.qml) \
         $$quote($$BASEDIR/assets/SearchResultView.qml) \
         $$quote($$BASEDIR/assets/SearchView.qml) \
+        $$quote($$BASEDIR/assets/VListView.qml) \
         $$quote($$BASEDIR/assets/icon/ic_browser.png) \
         $$quote($$BASEDIR/assets/icon/ic_copy_link.png) \
         $$quote($$BASEDIR/assets/icon/ic_help.png) \

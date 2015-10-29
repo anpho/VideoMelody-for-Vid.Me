@@ -54,6 +54,18 @@ TabbedPane {
             }
             Page {
                 id: page_browse
+                actionBarVisibility: ChromeVisibility.Compact
+                actionBarAutoHideBehavior: ActionBarAutoHideBehavior.HideOnScroll
+                actions: [
+                    ActionItem {
+                        title: qsTr("Search")
+                        imageSource: "asset:///icon/ic_search.png"
+                        ActionBar.placement: ActionBarPlacement.Signature
+                        onTriggered: {
+                            rootpane.activeTab = tab_search
+                        }
+                    }
+                ]
                 property bool showloadingTips: false
                 Container {
                     layout: DockLayout {
@@ -80,80 +92,18 @@ TabbedPane {
                         }
                         Container {
                             visible: op_featured.selected
-                            // listview section
-                            ListView {
+                            onVisibleChanged: {
+                                if (visible) {
+                                    listview_featured.scrollRole = ScrollRole.Main
+                                }
+                            }
+                            VListView {
+                                scrollRole: ScrollRole.Main
+                                baseurl: "https://api.vid.me/videos/featured?offset="
                                 id: listview_featured
-                                property int offset: 0
-                                property variant page
-                                property bool loading: false
-                                function reset() {
-                                    offset = 0;
-                                    page = null;
-                                    if (! adm_featured.isEmpty()) adm_featured.clear();
-                                    loading = true;
-                                    ds_featured.load();
-                                }
-                                function requestVideoPlayer(title, uri, image) {
-                                    console.log("Playing %1, %2, %3".arg(title).arg(uri).arg(image));
-                                    _app.invokeVideo(title, uri, image);
-                                }
-                                function requestShare(uri) {
-                                    _app.shareURL(uri);
-                                }
-                                function requestDownload(uri) {
-                                    rootpane.errorToast("Not implemented yet.")
-                                }
-                                dataModel: ArrayDataModel {
-                                    id: adm_featured
-                                }
-                                onCreationCompleted: {
-                                    reset();
-                                }
-                                listItemComponents: ListItemPallette {
+                                onToast: {
 
                                 }
-                                attachedObjects: [
-                                    DataSource {
-                                        id: ds_featured
-                                        source: "https://api.vid.me/videos/featured?offset=" + listview_featured.offset
-                                        remote: true
-                                        type: DataSourceType.Json
-                                        onDataLoaded: {
-                                            if (data.status) {
-                                                listview_featured.page = data.page;
-                                                listview_featured.offset = data.page.offset + data.page.limit
-                                                adm_featured.append(data.videos);
-                                                listview_featured.loading = false;
-                                            } else {
-                                                listview_featured.loading = false;
-                                                rootpane.errorToast(qsTr("Error occurred, %1").arg(data.error))
-                                            }
-                                        }
-                                        onError: {
-                                            listview_featured.loading = false;
-                                            rootpane.errorToast(qsTr("Server unreachable"))
-                                        }
-                                    },
-                                    ListScrollStateHandler {
-                                        onScrollingChanged: {
-                                            if (scrolling && atEnd && ! listview_featured.loading) {
-                                                listview_featured.loading = true;
-                                                ds_featured.load()
-                                            }
-                                        }
-                                        onAtEndChanged: {
-                                            if (atEnd && ! listview_featured.loading) {
-                                                listview_featured.loading = true;
-                                                ds_featured.load()
-                                            }
-                                        }
-                                    }
-                                ]
-                                scrollIndicatorMode: ScrollIndicatorMode.ProportionalBar
-                                layout: StackListLayout {
-
-                                }
-                                bufferedScrollingEnabled: true
                             }
                             Container {
                                 visible: listview_featured.loading
@@ -185,80 +135,17 @@ TabbedPane {
                         }
                         Container {
                             visible: op_hot.selected
-                            // listview section
-                            ListView {
+                            onVisibleChanged: {
+                                if (visible) {
+                                    listview_hot.scrollRole = ScrollRole.Main
+                                }
+                            }
+                            VListView {
                                 id: listview_hot
-                                property int offset: 0
-                                property variant page
-                                property bool loading: false
-                                function reset() {
-                                    offset = 0;
-                                    page = null;
-                                    if (! adm_hot.isEmpty()) adm_hot.clear();
-                                    loading = true;
-                                    ds_hot.load();
-                                }
-                                function requestVideoPlayer(title, uri, image) {
-                                    console.log("Playing %1, %2, %3".arg(title).arg(uri).arg(image));
-                                    _app.invokeVideo(title, uri, image);
-                                }
-                                function requestShare(uri) {
-                                    _app.shareURL(uri);
-                                }
-                                function requestDownload(uri) {
-                                    rootpane.errorToast("Not implemented yet.")
-                                }
-                                dataModel: ArrayDataModel {
-                                    id: adm_hot
-                                }
-                                onCreationCompleted: {
-                                    reset();
-                                }
-                                listItemComponents: ListItemPallette {
+                                baseurl: "https://api.vid.me/videos/hot?offset="
+                                onToast: {
 
                                 }
-                                attachedObjects: [
-                                    DataSource {
-                                        id: ds_hot
-                                        source: "https://api.vid.me/videos/hot?offset=" + listview_hot.offset
-                                        remote: true
-                                        type: DataSourceType.Json
-                                        onDataLoaded: {
-                                            if (data.status) {
-                                                listview_hot.page = data.page;
-                                                listview_hot.offset = data.page.offset + data.page.limit
-                                                adm_hot.append(data.videos);
-                                                listview_hot.loading = false;
-                                            } else {
-                                                listview_hot.loading = false;
-                                                rootpane.errorToast(qsTr("Error occurred, %1").arg(data.error))
-                                            }
-                                        }
-                                        onError: {
-                                            listview_hot.loading = false;
-                                            rootpane.errorToast(qsTr("Server unreachable"))
-                                        }
-                                    },
-                                    ListScrollStateHandler {
-                                        onScrollingChanged: {
-                                            if (scrolling && atEnd && ! listview_hot.loading) {
-                                                listview_hot.loading = true;
-                                                ds_hot.load()
-                                            }
-                                        }
-                                        onAtEndChanged: {
-                                            if (atEnd && ! listview_hot.loading) {
-                                                listview_hot.loading = true;
-                                                ds_hot.load()
-                                            }
-                                        }
-                                    }
-                                ]
-                                scrollIndicatorMode: ScrollIndicatorMode.ProportionalBar
-                                layout: StackListLayout {
-
-                                }
-                                bufferedScrollingEnabled: true
                             }
                             Container {
                                 visible: listview_hot.loading
@@ -290,80 +177,17 @@ TabbedPane {
                         }
                         Container {
                             visible: op_trending.selected
-                            // listview section
-                            ListView {
+                            onVisibleChanged: {
+                                if (visible) {
+                                    listview_trending.scrollRole = ScrollRole.Main
+                                }
+                            }
+                            VListView {
                                 id: listview_trending
-                                property int offset: 0
-                                property variant page
-                                property bool loading: false
-                                function reset() {
-                                    offset = 0;
-                                    page = null;
-                                    if (! adm_trending.isEmpty()) adm_trending.clear();
-                                    loading = true;
-                                    ds_trending.load();
-                                }
-                                function requestVideoPlayer(title, uri, image) {
-                                    console.log("Playing %1, %2, %3".arg(title).arg(uri).arg(image));
-                                    _app.invokeVideo(title, uri, image);
-                                }
-                                function requestShare(uri) {
-                                    _app.shareURL(uri);
-                                }
-                                function requestDownload(uri) {
-                                    rootpane.errorToast("Not implemented yet.")
-                                }
-                                dataModel: ArrayDataModel {
-                                    id: adm_trending
-                                }
-                                onCreationCompleted: {
-                                    reset();
-                                }
-                                listItemComponents: ListItemPallette {
+                                baseurl: "https://api.vid.me/videos/trending?offset="
+                                onToast: {
 
                                 }
-                                attachedObjects: [
-                                    DataSource {
-                                        id: ds_trending
-                                        source: "https://api.vid.me/videos/trending?offset=" + listview_trending.offset
-                                        remote: true
-                                        type: DataSourceType.Json
-                                        onDataLoaded: {
-                                            if (data.status) {
-                                                listview_trending.page = data.page;
-                                                listview_trending.offset = data.page.offset + data.page.limit
-                                                adm_trending.append(data.videos);
-                                                listview_trending.loading = false;
-                                            } else {
-                                                listview_trending.loading = false;
-                                                rootpane.errorToast(qsTr("Error occurred, %1").arg(data.error))
-                                            }
-                                        }
-                                        onError: {
-                                            listview_trending.loading = false;
-                                            rootpane.errorToast(qsTr("Server unreachable"))
-                                        }
-                                    },
-                                    ListScrollStateHandler {
-                                        onScrollingChanged: {
-                                            if (scrolling && atEnd && ! listview_trending.loading) {
-                                                listview_trending.loading = true;
-                                                ds_trending.load()
-                                            }
-                                        }
-                                        onAtEndChanged: {
-                                            if (atEnd && ! listview_trending.loading) {
-                                                listview_trending.loading = true;
-                                                ds_trending.load()
-                                            }
-                                        }
-                                    }
-                                ]
-                                scrollIndicatorMode: ScrollIndicatorMode.ProportionalBar
-                                layout: StackListLayout {
-
-                                }
-                                bufferedScrollingEnabled: true
                             }
                             Container {
                                 visible: listview_trending.loading
@@ -405,6 +229,7 @@ TabbedPane {
         }
     }
     Tab {
+        id: tab_search
         title: qsTr("Search")
         imageSource: "asset:///icon/ic_search.png"
         NavigationPane {
