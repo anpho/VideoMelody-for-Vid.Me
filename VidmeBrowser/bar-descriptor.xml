@@ -69,13 +69,21 @@
 
     <!--  Name of author which is used for signing. Must match the developer name of your development certificate. -->
     <name>
-       Vid.Me in Motion
-       <text xml:lang="zh-CN">Vid.Me &#x6d4f;&#x89c8;&#x5668;</text>
+       Vidme In Motion
+       
+       
+       <text xml:lang="zh-CN">Vidme In Motion</text>
     </name>
     <description>
-       Vid.me Native Browser
+       Vid.me Browser
        <text xml:lang="zh-CN">&#x7528;&#x4e8e;&#x6d4f;&#x89c8;Vid.Me&#x7f51;&#x7ad9;&#x89c6;&#x9891;&#x7684;&#x6d4f;&#x89c8;&#x5668;</text>
     </description>
+    <splashScreens>
+       <image>1440x1440.png</image>
+       <image>720x1280.png</image>
+       <image>720x720.png</image>
+       <image>768x1280.png</image>
+    </splashScreens>
     <authorId>gYAAgMy-I-SFJtVvioZxVXYQjhA</authorId>
     <author>anpho</author>
 
@@ -99,6 +107,10 @@
     <asset path="translations" dest="qm">
         <include name="*.qm"/>
     </asset>
+    <asset path="assets/splash/1440x1440.png">1440x1440.png</asset>
+    <asset path="assets/splash/720x1280.png">720x1280.png</asset>
+    <asset path="assets/splash/720x720.png">720x720.png</asset>
+    <asset path="assets/splash/768x1280.png">768x1280.png</asset>
 
     <!-- Request permission to execute native code.  Required for native applications. -->
     <permission system="true">run_native</permission>

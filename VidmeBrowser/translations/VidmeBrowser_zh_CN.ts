@@ -2,36 +2,89 @@
 <!DOCTYPE TS>
 <TS version="2.0" language="zh_CN">
 <context>
+    <name>AboutPage</name>
+    <message>
+        <location filename="../assets/AboutPage.qml" line="5"/>
+        <source>About</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/AboutPage.qml" line="12"/>
+        <source>APPLICATION</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/AboutPage.qml" line="24"/>
+        <source>This app is built as BlackBerry 10 client for vidme.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/AboutPage.qml" line="30"/>
+        <source>VID.ME</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/AboutPage.qml" line="33"/>
+        <source>&lt;a href=&apos;https://vid.me/terms-of-use&apos;&gt;Terms of use&lt;/a&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/AboutPage.qml" line="41"/>
+        <source>&lt;a href=&apos;https://vid.me/privacy&apos;&gt;Privacy Policy&lt;/a&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/AboutPage.qml" line="49"/>
+        <source>&lt;a href=&apos;https://vid.me/rules&apos;&gt;Community rules&lt;/a&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/AboutPage.qml" line="57"/>
+        <source>&lt;a href=&apos;https://vid.me/dmca&apos;&gt;Digital Millennium Copyright Act Procedures&lt;/a&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/AboutPage.qml" line="65"/>
+        <source>DEVELOPERS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/AboutPage.qml" line="69"/>
+        <source>Merrick Zhang (&lt;a href=&apos;http://bbdev.cn&apos;&gt;BBDev.CN&lt;/a&gt;)</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ListItemPallette</name>
     <message>
         <location filename="../assets/ListItemPallette.qml" line="11"/>
         <source>Share</source>
-        <translation type="unfinished"></translation>
+        <translation>共享</translation>
     </message>
     <message>
         <location filename="../assets/ListItemPallette.qml" line="19"/>
         <source>Download</source>
-        <translation type="unfinished"></translation>
+        <translation>下载（尚未实现）</translation>
     </message>
     <message>
         <location filename="../assets/ListItemPallette.qml" line="139"/>
         <source>Duration</source>
-        <translation type="unfinished"></translation>
+        <translation>时长</translation>
     </message>
     <message>
         <location filename="../assets/ListItemPallette.qml" line="162"/>
         <source>Comments</source>
-        <translation type="unfinished"></translation>
+        <translation>评论</translation>
     </message>
     <message>
         <location filename="../assets/ListItemPallette.qml" line="185"/>
         <source>Viewed</source>
-        <translation type="unfinished"></translation>
+        <translation>查看</translation>
     </message>
     <message>
         <location filename="../assets/ListItemPallette.qml" line="208"/>
         <source>Liked</source>
-        <translation type="unfinished"></translation>
+        <translation>赞</translation>
     </message>
 </context>
 <context>
@@ -39,17 +92,17 @@
     <message>
         <location filename="../assets/SearchResultView.qml" line="30"/>
         <source>Error occurred, %1</source>
-        <translation type="unfinished"></translation>
+        <translation>应用出错： %1</translation>
     </message>
     <message>
         <location filename="../assets/SearchResultView.qml" line="35"/>
         <source>Server unreachable</source>
-        <translation type="unfinished"></translation>
+        <translation>无法访问服务器，请检查网络连接</translation>
     </message>
     <message>
         <location filename="../assets/SearchResultView.qml" line="55"/>
         <source>Search Results %1</source>
-        <translation type="unfinished"></translation>
+        <translation>搜索结果 %1</translation>
     </message>
 </context>
 <context>
@@ -57,57 +110,62 @@
     <message>
         <location filename="../assets/SearchView.qml" line="6"/>
         <source>Search Videos</source>
-        <translation type="unfinished"></translation>
+        <translation>搜索视频</translation>
     </message>
     <message>
         <location filename="../assets/SearchView.qml" line="24"/>
         <source>QUERY FOR</source>
-        <translation type="unfinished"></translation>
+        <translation>搜索内容</translation>
     </message>
     <message>
         <location filename="../assets/SearchView.qml" line="28"/>
         <source>What are you looking for ?</source>
-        <translation type="unfinished"></translation>
+        <translation>你想要搜索什么？</translation>
     </message>
     <message>
-        <location filename="../assets/SearchView.qml" line="38"/>
+        <location filename="../assets/SearchView.qml" line="45"/>
         <source>OPTIONS</source>
-        <translation type="unfinished"></translation>
+        <translation>选项</translation>
     </message>
     <message>
-        <location filename="../assets/SearchView.qml" line="50"/>
+        <location filename="../assets/SearchView.qml" line="57"/>
         <source>Include NSFW Content</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../assets/SearchView.qml" line="66"/>
-        <source>Likes Count</source>
-        <translation type="unfinished"></translation>
+        <translation>包含成人内容</translation>
     </message>
     <message>
         <location filename="../assets/SearchView.qml" line="70"/>
+        <source>This option is disabled in preview version.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/SearchView.qml" line="77"/>
+        <source>Likes Count</source>
+        <translation>获得的赞数</translation>
+    </message>
+    <message>
+        <location filename="../assets/SearchView.qml" line="81"/>
         <source>Hot Score</source>
-        <translation type="unfinished"></translation>
+        <translation>热度</translation>
     </message>
     <message>
-        <location filename="../assets/SearchView.qml" line="74"/>
+        <location filename="../assets/SearchView.qml" line="85"/>
         <source>Score</source>
-        <translation type="unfinished"></translation>
+        <translation>综合得分</translation>
     </message>
     <message>
-        <location filename="../assets/SearchView.qml" line="78"/>
+        <location filename="../assets/SearchView.qml" line="89"/>
         <source>Date</source>
-        <translation type="unfinished"></translation>
+        <translation>发布日期</translation>
     </message>
     <message>
-        <location filename="../assets/SearchView.qml" line="82"/>
+        <location filename="../assets/SearchView.qml" line="93"/>
         <source>Sort By</source>
-        <translation type="unfinished"></translation>
+        <translation>排序方式</translation>
     </message>
     <message>
-        <location filename="../assets/SearchView.qml" line="95"/>
+        <location filename="../assets/SearchView.qml" line="106"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>搜索</translation>
     </message>
 </context>
 <context>
@@ -115,53 +173,50 @@
     <message>
         <location filename="../assets/VListView.qml" line="62"/>
         <source>Error occurred, %1</source>
-        <translation type="unfinished"></translation>
+        <translation>应用出错： %1</translation>
     </message>
     <message>
         <location filename="../assets/VListView.qml" line="67"/>
         <source>Server unreachable</source>
-        <translation type="unfinished"></translation>
+        <translation>无法访问服务器，请检查网络连接</translation>
     </message>
 </context>
 <context>
     <name>main</name>
     <message>
-        <location filename="../assets/main.qml" line="40"/>
+        <location filename="../assets/main.qml" line="52"/>
         <source>Browse</source>
-        <translation type="unfinished"></translation>
+        <translation>浏览视频</translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="80"/>
+        <location filename="../assets/main.qml" line="92"/>
         <source>Featured</source>
-        <translation type="unfinished"></translation>
+        <translation>精选</translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="84"/>
+        <location filename="../assets/main.qml" line="96"/>
         <source>Hot</source>
-        <translation type="unfinished"></translation>
+        <translation>热门</translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="88"/>
+        <location filename="../assets/main.qml" line="101"/>
         <source>Trending</source>
-        <translation type="unfinished"></translation>
+        <translation>趋势</translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="129"/>
-        <location filename="../assets/main.qml" line="171"/>
-        <location filename="../assets/main.qml" line="213"/>
         <source>Loading...</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">加载中...</translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="61"/>
-        <location filename="../assets/main.qml" line="233"/>
+        <location filename="../assets/main.qml" line="73"/>
+        <location filename="../assets/main.qml" line="169"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>搜索</translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="243"/>
+        <location filename="../assets/main.qml" line="180"/>
         <source>Nearby</source>
-        <translation type="unfinished"></translation>
+        <translation>附近</translation>
     </message>
 </context>
 </TS>

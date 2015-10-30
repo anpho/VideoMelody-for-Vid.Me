@@ -33,6 +33,13 @@ Page {
                         actionitem_search.enabled = false
                     }
                 }
+                input.submitKey: SubmitKey.Search
+                input.submitKeyFocusBehavior: SubmitKeyFocusBehavior.Lose
+                input.onSubmitted: {
+                    if (actionitem_search.enabled) {
+                        actionitem_search.triggered();
+                    }
+                }
             }
             Header {
                 title: qsTr("OPTIONS")

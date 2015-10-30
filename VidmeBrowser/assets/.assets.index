@@ -1,5 +1,6 @@
 1
-19
+24
+AboutPage.qml
 Common.qml
 icon/ic_browser.png
 icon/ic_copy_link.png
@@ -18,4 +19,8 @@ res/logo_light_bg_powered_by.png
 res/vid.png
 SearchResultView.qml
 SearchView.qml
+splash/1440x1440.png
+splash/720x1280.png
+splash/720x720.png
+splash/768x1280.png
 VListView.qml

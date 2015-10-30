@@ -20,8 +20,16 @@ import bb.system 1.2
 import cn.anpho 1.0
 import bb.device 1.4
 TabbedPane {
+    Menu.definition: MenuDefinition {
+        helpAction: HelpActionItem {
+            onTriggered: {
+                var aboutpage = Qt.createComponent("AboutPage.qml").createObject(currentNavpane);
+                currentNavpane.push(aboutpage)
+            }
+        }
+    }
     showTabsOnActionBar: false
-    property variant currentNavpane
+    property variant   currentNavpane : nav_browse
     id: rootpane
     attachedObjects: [
         SystemToast {
@@ -36,7 +44,11 @@ TabbedPane {
         sst.body = msg;
         sst.show()
     }
+    onActiveTabChanged: {
+        currentNavpane = activeTab.tabnav
+    }
     Tab {
+        property alias tabnav: nav_browse
         title: qsTr("Browse")
         imageSource: "asset:///icon/ic_home.png"
         NavigationPane {
@@ -66,7 +78,7 @@ TabbedPane {
                         }
                     }
                 ]
-                property bool showloadingTips: false
+                property bool showloadingTips: listview_featured.loading || listview_hot.loading || listview_trending.loading
                 Container {
                     layout: DockLayout {
 
@@ -90,131 +102,53 @@ TabbedPane {
                                 }
                             ]
                         }
-                        Container {
+
+                        VListView {
                             visible: op_featured.selected
                             onVisibleChanged: {
                                 if (visible) {
                                     listview_featured.scrollRole = ScrollRole.Main
+                                } else {
+                                    listview_featured.scrollRole = ScrollRole.Default
                                 }
                             }
-                            VListView {
-                                scrollRole: ScrollRole.Main
-                                baseurl: "https://api.vid.me/videos/featured?offset="
-                                id: listview_featured
-                                onToast: {
-
-                                }
-                            }
-                            Container {
-                                visible: listview_featured.loading
-                                layout: DockLayout {
-                                }
-                                horizontalAlignment: HorizontalAlignment.Fill
-                                topPadding: 20.0
-                                leftPadding: 20.0
-                                rightPadding: 20.0
-                                bottomPadding: 20.0
-                                Container {
-                                    layout: StackLayout {
-                                        orientation: LayoutOrientation.LeftToRight
-
-                                    }
-                                    horizontalAlignment: HorizontalAlignment.Center
-                                    verticalAlignment: VerticalAlignment.Center
-                                    ActivityIndicator {
-                                        running: true
-                                        verticalAlignment: VerticalAlignment.Center
-                                    }
-                                    Label {
-                                        text: qsTr("Loading...")
-                                        verticalAlignment: VerticalAlignment.Center
-                                    }
-                                }
+                            baseurl: "https://api.vid.me/videos/featured?offset="
+                            id: listview_featured
+                            onToast: {
 
                             }
                         }
-                        Container {
+
+                        VListView {
                             visible: op_hot.selected
                             onVisibleChanged: {
                                 if (visible) {
                                     listview_hot.scrollRole = ScrollRole.Main
+                                } else {
+                                    listview_hot.scrollRole = ScrollRole.Default
                                 }
                             }
-                            VListView {
-                                id: listview_hot
-                                baseurl: "https://api.vid.me/videos/hot?offset="
-                                onToast: {
-
-                                }
-                            }
-                            Container {
-                                visible: listview_hot.loading
-                                layout: DockLayout {
-                                }
-                                horizontalAlignment: HorizontalAlignment.Fill
-                                topPadding: 20.0
-                                leftPadding: 20.0
-                                rightPadding: 20.0
-                                bottomPadding: 20.0
-                                Container {
-                                    layout: StackLayout {
-                                        orientation: LayoutOrientation.LeftToRight
-
-                                    }
-                                    horizontalAlignment: HorizontalAlignment.Center
-                                    verticalAlignment: VerticalAlignment.Center
-                                    ActivityIndicator {
-                                        running: true
-                                        verticalAlignment: VerticalAlignment.Center
-                                    }
-                                    Label {
-                                        text: qsTr("Loading...")
-                                        verticalAlignment: VerticalAlignment.Center
-                                    }
-                                }
+                            id: listview_hot
+                            baseurl: "https://api.vid.me/videos/hot?offset="
+                            onToast: {
 
                             }
+
                         }
-                        Container {
+
+                        VListView {
+                            id: listview_trending
+                            baseurl: "https://api.vid.me/videos/trending?offset="
+                            onToast: {
+
+                            }
                             visible: op_trending.selected
                             onVisibleChanged: {
                                 if (visible) {
                                     listview_trending.scrollRole = ScrollRole.Main
+                                } else {
+                                    listview_trending.scrollRole = ScrollRole.Default
                                 }
-                            }
-                            VListView {
-                                id: listview_trending
-                                baseurl: "https://api.vid.me/videos/trending?offset="
-                                onToast: {
-
-                                }
-                            }
-                            Container {
-                                visible: listview_trending.loading
-                                layout: DockLayout {
-                                }
-                                horizontalAlignment: HorizontalAlignment.Fill
-                                topPadding: 20.0
-                                leftPadding: 20.0
-                                rightPadding: 20.0
-                                bottomPadding: 20.0
-                                Container {
-                                    layout: StackLayout {
-                                        orientation: LayoutOrientation.LeftToRight
-
-                                    }
-                                    horizontalAlignment: HorizontalAlignment.Center
-                                    verticalAlignment: VerticalAlignment.Center
-                                    ActivityIndicator {
-                                        running: true
-                                        verticalAlignment: VerticalAlignment.Center
-                                    }
-                                    Label {
-                                        text: qsTr("Loading...")
-                                        verticalAlignment: VerticalAlignment.Center
-                                    }
-                                }
-
                             }
                         }
                     }
@@ -229,6 +163,7 @@ TabbedPane {
         }
     }
     Tab {
+        property alias tabnav: nav_search
         id: tab_search
         title: qsTr("Search")
         imageSource: "asset:///icon/ic_search.png"
@@ -240,6 +175,7 @@ TabbedPane {
         }
     }
     Tab {
+        property alias tabnav: nav_nearby
         title: qsTr("Nearby")
         imageSource: "asset:///icon/ic_map.png"
         enabled: false
