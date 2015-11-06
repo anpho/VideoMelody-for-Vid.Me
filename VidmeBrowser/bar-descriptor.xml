@@ -110,10 +110,10 @@
     <asset path="translations" dest="qm">
         <include name="*.qm"/>
     </asset>
-    <asset path="assets/splash/1440x1440.png">1440x1440.png</asset>
-    <asset path="assets/splash/720x1280.png">720x1280.png</asset>
-    <asset path="assets/splash/720x720.png">720x720.png</asset>
-    <asset path="assets/splash/768x1280.png">768x1280.png</asset>
+    <asset path="splash/1440x1440.png">1440x1440.png</asset>
+    <asset path="splash/720x1280.png">720x1280.png</asset>
+    <asset path="splash/720x720.png">720x720.png</asset>
+    <asset path="splash/768x1280.png">768x1280.png</asset>
 
     <!-- Request permission to execute native code.  Required for native applications. -->
     <permission system="true">run_native</permission>

@@ -59,11 +59,7 @@ config_pri_assets {
         $$quote($$BASEDIR/assets/res/logo_dark_bg.png) \
         $$quote($$BASEDIR/assets/res/logo_light_bg.png) \
         $$quote($$BASEDIR/assets/res/logo_light_bg_powered_by.png) \
-        $$quote($$BASEDIR/assets/res/vid.png) \
-        $$quote($$BASEDIR/assets/splash/1440x1440.png) \
-        $$quote($$BASEDIR/assets/splash/720x1280.png) \
-        $$quote($$BASEDIR/assets/splash/720x720.png) \
-        $$quote($$BASEDIR/assets/splash/768x1280.png)
+        $$quote($$BASEDIR/assets/res/vid.png)
 }
 
 config_pri_source_group1 {
@@ -96,10 +92,7 @@ lupdate_inclusion {
         $$quote($$BASEDIR/../assets/icon/*.qs) \
         $$quote($$BASEDIR/../assets/res/*.qml) \
         $$quote($$BASEDIR/../assets/res/*.js) \
-        $$quote($$BASEDIR/../assets/res/*.qs) \
-        $$quote($$BASEDIR/../assets/splash/*.qml) \
-        $$quote($$BASEDIR/../assets/splash/*.js) \
-        $$quote($$BASEDIR/../assets/splash/*.qs)
+        $$quote($$BASEDIR/../assets/res/*.qs)
 
     HEADERS += \
         $$quote($$BASEDIR/../src/*.h) \
