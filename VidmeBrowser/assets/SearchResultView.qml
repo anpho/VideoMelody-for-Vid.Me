@@ -71,6 +71,7 @@ Page {
         title: qsTr("Search Results %1").arg(results_count)
     }
     actionBarAutoHideBehavior: ActionBarAutoHideBehavior.HideOnScroll
+    actionBarVisibility: ChromeVisibility.Compact
     Container {
         verticalAlignment: VerticalAlignment.Fill
         horizontalAlignment: HorizontalAlignment.Fill

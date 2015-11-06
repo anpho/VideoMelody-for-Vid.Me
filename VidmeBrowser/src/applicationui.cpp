@@ -45,15 +45,14 @@ ApplicationUI::ApplicationUI() :
     // initial load
     onSystemLanguageChanged();
 
-    // Create scene document from main.qml asset, the parent is set
-    // to ensure the document gets destroyed properly at shut down.
-    QmlDocument *qml = QmlDocument::create("asset:///main.qml").parent(this);
+    QmlDocument *qml = QmlDocument::create("qrc:/assets/main.qml").parent(this);
     qml->setContextProperty("_app", this);
     // Create root object for the UI
     AbstractPane *root = qml->createRootObject<AbstractPane>();
 
     // Set created root object as the application scene
     Application::instance()->setScene(root);
+
 }
 
 void ApplicationUI::onSystemLanguageChanged()

@@ -6,57 +6,52 @@
     <message>
         <location filename="../assets/AboutPage.qml" line="11"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>关于</translation>
     </message>
     <message>
-        <location filename="../assets/AboutPage.qml" line="35"/>
+        <location filename="../assets/AboutPage.qml" line="36"/>
         <source>This app is built as BlackBerry 10 client for vidme.</source>
-        <translation type="unfinished"></translation>
+        <translation>本应用为vidme的第三方客户端。</translation>
     </message>
     <message>
-        <location filename="../assets/AboutPage.qml" line="18"/>
+        <location filename="../assets/AboutPage.qml" line="19"/>
         <source>APP INFORMATION</source>
-        <translation type="unfinished"></translation>
+        <translation>应用程序版本</translation>
     </message>
     <message>
-        <location filename="../assets/AboutPage.qml" line="41"/>
+        <location filename="../assets/AboutPage.qml" line="42"/>
         <source>VID.ME TERMS</source>
-        <translation type="unfinished"></translation>
+        <translation>VID.ME 相关条款</translation>
     </message>
     <message>
-        <location filename="../assets/AboutPage.qml" line="44"/>
+        <location filename="../assets/AboutPage.qml" line="45"/>
         <source>&lt;a href=&apos;https://vid.me/terms-of-use&apos;&gt;Terms of use&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;a href=&apos;https://vid.me/terms-of-use&apos;&gt;使用须知&lt;/a&gt;</translation>
     </message>
     <message>
-        <location filename="../assets/AboutPage.qml" line="52"/>
+        <location filename="../assets/AboutPage.qml" line="53"/>
         <source>&lt;a href=&apos;https://vid.me/privacy&apos;&gt;Privacy Policy&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;a href=&apos;https://vid.me/privacy&apos;&gt;隐私政策&lt;/a&gt;</translation>
     </message>
     <message>
-        <location filename="../assets/AboutPage.qml" line="60"/>
+        <location filename="../assets/AboutPage.qml" line="61"/>
         <source>&lt;a href=&apos;https://vid.me/rules&apos;&gt;Community rules&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;a href=&apos;https://vid.me/rules&apos;&gt;社区守则&lt;/a&gt;</translation>
     </message>
     <message>
-        <location filename="../assets/AboutPage.qml" line="68"/>
+        <location filename="../assets/AboutPage.qml" line="69"/>
         <source>&lt;a href=&apos;https://vid.me/dmca&apos;&gt;Digital Millennium Copyright Act Procedures&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;a href=&apos;https://vid.me/dmca&apos;&gt;DMCA&lt;/a&gt;</translation>
     </message>
     <message>
-        <location filename="../assets/AboutPage.qml" line="76"/>
+        <location filename="../assets/AboutPage.qml" line="77"/>
         <source>DEV TEAM</source>
-        <translation type="unfinished"></translation>
+        <translation>开发人员</translation>
     </message>
     <message>
-        <location filename="../assets/AboutPage.qml" line="88"/>
-        <source>UPDATE LOG</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../assets/AboutPage.qml" line="80"/>
+        <location filename="../assets/AboutPage.qml" line="81"/>
         <source>Merrick Zhang (&lt;a href=&apos;http://bbdev.cn&apos;&gt;BBDev.CN&lt;/a&gt;)</source>
-        <translation type="unfinished"></translation>
+        <translation>Merrick Zhang (&lt;a href=&apos;http://bbdev.cn&apos;&gt;BBDev.CN&lt;/a&gt;)</translation>
     </message>
 </context>
 <context>
@@ -67,27 +62,26 @@
         <translation>共享</translation>
     </message>
     <message>
-        <location filename="../assets/ListItemPallette.qml" line="19"/>
         <source>Download</source>
-        <translation>下载（尚未实现）</translation>
+        <translation type="obsolete">下载（尚未实现）</translation>
     </message>
     <message>
-        <location filename="../assets/ListItemPallette.qml" line="139"/>
+        <location filename="../assets/ListItemPallette.qml" line="132"/>
         <source>Duration</source>
         <translation>时长</translation>
     </message>
     <message>
-        <location filename="../assets/ListItemPallette.qml" line="162"/>
+        <location filename="../assets/ListItemPallette.qml" line="155"/>
         <source>Comments</source>
         <translation>评论</translation>
     </message>
     <message>
-        <location filename="../assets/ListItemPallette.qml" line="185"/>
+        <location filename="../assets/ListItemPallette.qml" line="178"/>
         <source>Viewed</source>
         <translation>查看</translation>
     </message>
     <message>
-        <location filename="../assets/ListItemPallette.qml" line="208"/>
+        <location filename="../assets/ListItemPallette.qml" line="201"/>
         <source>Liked</source>
         <translation>赞</translation>
     </message>
@@ -113,57 +107,57 @@
 <context>
     <name>SearchView</name>
     <message>
-        <location filename="../assets/SearchView.qml" line="6"/>
+        <location filename="../assets/SearchView.qml" line="12"/>
         <source>Search Videos</source>
         <translation>搜索视频</translation>
     </message>
     <message>
-        <location filename="../assets/SearchView.qml" line="24"/>
+        <location filename="../assets/SearchView.qml" line="29"/>
         <source>QUERY FOR</source>
         <translation>搜索内容</translation>
     </message>
     <message>
-        <location filename="../assets/SearchView.qml" line="28"/>
+        <location filename="../assets/SearchView.qml" line="33"/>
         <source>What are you looking for ?</source>
         <translation>你想要搜索什么？</translation>
     </message>
     <message>
-        <location filename="../assets/SearchView.qml" line="45"/>
+        <location filename="../assets/SearchView.qml" line="50"/>
         <source>OPTIONS</source>
         <translation>选项</translation>
     </message>
     <message>
-        <location filename="../assets/SearchView.qml" line="58"/>
+        <location filename="../assets/SearchView.qml" line="62"/>
         <source>Include NSFW Content</source>
         <translation>包含成人内容</translation>
     </message>
     <message>
-        <location filename="../assets/SearchView.qml" line="74"/>
+        <location filename="../assets/SearchView.qml" line="78"/>
         <source>Likes Count</source>
         <translation>获得的赞数</translation>
     </message>
     <message>
-        <location filename="../assets/SearchView.qml" line="78"/>
+        <location filename="../assets/SearchView.qml" line="82"/>
         <source>Hot Score</source>
         <translation>热度</translation>
     </message>
     <message>
-        <location filename="../assets/SearchView.qml" line="82"/>
+        <location filename="../assets/SearchView.qml" line="86"/>
         <source>Score</source>
         <translation>综合得分</translation>
     </message>
     <message>
-        <location filename="../assets/SearchView.qml" line="86"/>
+        <location filename="../assets/SearchView.qml" line="90"/>
         <source>Date</source>
         <translation>发布日期</translation>
     </message>
     <message>
-        <location filename="../assets/SearchView.qml" line="90"/>
+        <location filename="../assets/SearchView.qml" line="94"/>
         <source>Sort By</source>
         <translation>排序方式</translation>
     </message>
     <message>
-        <location filename="../assets/SearchView.qml" line="103"/>
+        <location filename="../assets/SearchView.qml" line="107"/>
         <source>Search</source>
         <translation>搜索</translation>
     </message>
@@ -173,97 +167,132 @@
     <message>
         <location filename="../assets/SettingsPage.qml" line="11"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>设置</translation>
     </message>
     <message>
         <location filename="../assets/SettingsPage.qml" line="17"/>
         <source>APPLICATION THEME</source>
-        <translation type="unfinished"></translation>
+        <translation>应用主题</translation>
     </message>
     <message>
         <location filename="../assets/SettingsPage.qml" line="29"/>
         <source>Use Dark Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>使用暗色主题</translation>
     </message>
     <message>
         <location filename="../assets/SettingsPage.qml" line="52"/>
         <source>Turn this on to save battery on OLED screen devices.</source>
-        <translation type="unfinished"></translation>
+        <translation>使用暗色主题将有助于OLED设备减少耗电。</translation>
     </message>
     <message>
         <location filename="../assets/SettingsPage.qml" line="59"/>
         <source>NSFW CONTENT FILTER</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../assets/SettingsPage.qml" line="72"/>
-        <source>Show NSFW Content</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../assets/SettingsPage.qml" line="92"/>
-        <source>Because vidme is a user-generated-content service, it may bring in NSFW contents as well. Keep this switch off if you want a safer enviroment.</source>
-        <translation type="unfinished"></translation>
+        <translation>成人内容过滤</translation>
     </message>
     <message>
         <location filename="../assets/SettingsPage.qml" line="97"/>
-        <source>*Restart required.</source>
-        <translation type="unfinished"></translation>
+        <source>*App restart is highly recommended.</source>
+        <translation>*建议更改此选项后重启应用。</translation>
     </message>
     <message>
-        <location filename="../assets/SettingsPage.qml" line="103"/>
-        <source>WARNING: some nsfw content may not been tagged as NSFW yet, so you may see some of them sometimes with this toggle off.</source>
-        <translation type="unfinished"></translation>
+        <location filename="../assets/SettingsPage.qml" line="72"/>
+        <source>Include NSFW Content</source>
+        <translation>显示成人内容</translation>
     </message>
     <message>
-        <location filename="../assets/SettingsPage.qml" line="144"/>
-        <source>ADVANCED FEATURES</source>
-        <translation type="unfinished"></translation>
+        <location filename="../assets/SettingsPage.qml" line="92"/>
+        <source>Because vidme is a user-generated-content service, it may bring in NSFW ( Not Safe For Work ) contents as well. Keep this switch off if you want a safer enviroment.</source>
+        <translation>由于vidme是一个UGC（用户生成内容）社区，其中可能会包含少儿不宜的内容。请将此选项设置为关闭，以过滤相关内容。</translation>
+    </message>
+    <message>
+        <location filename="../assets/SettingsPage.qml" line="104"/>
+        <source>WARNING: Some NSFW videos are not been tagged as NSFW for now, so you may still see it in Search Results sometimes. Please enable app lock below.</source>
+        <translation>警告：由于部分少儿不宜的视频并未被标注为NSFW，即使此选项设置为关闭，你仍有可能会看到部分成人内容。请启用下方的应用密码。</translation>
+    </message>
+    <message>
+        <location filename="../assets/SettingsPage.qml" line="109"/>
+        <source>APP LOCK</source>
+        <translation>应用锁定</translation>
+    </message>
+    <message>
+        <location filename="../assets/SettingsPage.qml" line="117"/>
+        <source>You&apos;ll be requested to type password during app startup</source>
+        <translation>启用后，每次应用启动都需要验证密码</translation>
+    </message>
+    <message>
+        <location filename="../assets/SettingsPage.qml" line="124"/>
+        <source>Password</source>
+        <translation>密码</translation>
+    </message>
+    <message>
+        <location filename="../assets/SettingsPage.qml" line="146"/>
+        <source>Set</source>
+        <translation>设置</translation>
+    </message>
+    <message>
+        <location filename="../assets/SettingsPage.qml" line="151"/>
+        <source>Password Set</source>
+        <translation>应用密码已设置</translation>
     </message>
     <message>
         <location filename="../assets/SettingsPage.qml" line="156"/>
+        <source>Clear</source>
+        <translation>清除</translation>
+    </message>
+    <message>
+        <location filename="../assets/SettingsPage.qml" line="160"/>
+        <source>Password Cleared.</source>
+        <translation>应用密码已清除</translation>
+    </message>
+    <message>
+        <location filename="../assets/SettingsPage.qml" line="203"/>
+        <source>ADVANCED FEATURES</source>
+        <translation>高级功能</translation>
+    </message>
+    <message>
+        <location filename="../assets/SettingsPage.qml" line="215"/>
         <source>Enable Quick Translation</source>
-        <translation type="unfinished"></translation>
+        <translation>启用文本翻译</translation>
     </message>
     <message>
-        <location filename="../assets/SettingsPage.qml" line="173"/>
+        <location filename="../assets/SettingsPage.qml" line="232"/>
         <source>Translate to</source>
-        <translation type="unfinished"></translation>
+        <translation>翻译为</translation>
     </message>
     <message>
-        <location filename="../assets/SettingsPage.qml" line="176"/>
+        <location filename="../assets/SettingsPage.qml" line="235"/>
         <source>Simp-Chinese</source>
-        <translation type="unfinished"></translation>
+        <translation>简体中文</translation>
     </message>
     <message>
-        <location filename="../assets/SettingsPage.qml" line="181"/>
+        <location filename="../assets/SettingsPage.qml" line="240"/>
         <source>English</source>
-        <translation type="unfinished"></translation>
+        <translation>英文</translation>
     </message>
     <message>
-        <location filename="../assets/SettingsPage.qml" line="189"/>
-        <source>Powered by Baidu Translation Service.</source>
-        <translation type="unfinished"></translation>
+        <location filename="../assets/SettingsPage.qml" line="248"/>
+        <source>*Will be available soon.</source>
+        <translation>*即将推出。</translation>
     </message>
     <message>
-        <location filename="../assets/SettingsPage.qml" line="196"/>
+        <location filename="../assets/SettingsPage.qml" line="256"/>
         <source>MISC.</source>
-        <translation type="unfinished"></translation>
+        <translation>其他</translation>
     </message>
     <message>
-        <location filename="../assets/SettingsPage.qml" line="209"/>
+        <location filename="../assets/SettingsPage.qml" line="269"/>
         <source>This app automatically stores web images to local storage ( 50M Bytes at most ) , so typically you won&apos;t need to clear the cache manually. If you really want to, here&apos;s a button:</source>
-        <translation type="unfinished"></translation>
+        <translation>本应用会自动管理图片缓存，本地缓存的上限为50M，所以并不需要你对缓存执行清空操作。如果你坚持要清空缓存，这里有一个按钮：</translation>
     </message>
     <message>
-        <location filename="../assets/SettingsPage.qml" line="224"/>
+        <location filename="../assets/SettingsPage.qml" line="284"/>
         <source>CLEAR IMAGE CACHE</source>
-        <translation type="unfinished"></translation>
+        <translation>清空图片缓存</translation>
     </message>
     <message>
-        <location filename="../assets/SettingsPage.qml" line="230"/>
+        <location filename="../assets/SettingsPage.qml" line="290"/>
         <source>Cache Cleared.</source>
-        <translation type="unfinished"></translation>
+        <translation>图片缓存已清除</translation>
     </message>
 </context>
 <context>
@@ -280,39 +309,72 @@
     </message>
 </context>
 <context>
+    <name>lock</name>
+    <message>
+        <location filename="../assets/lock.qml" line="7"/>
+        <source>Application Locked</source>
+        <translation>应用已锁定</translation>
+    </message>
+    <message>
+        <location filename="../assets/lock.qml" line="24"/>
+        <source>Password Incorrect</source>
+        <translation>密码错误</translation>
+    </message>
+    <message>
+        <location filename="../assets/lock.qml" line="37"/>
+        <source>Password Required</source>
+        <translation>请输入密码</translation>
+    </message>
+    <message>
+        <location filename="../assets/lock.qml" line="53"/>
+        <source>Unlock</source>
+        <translation>解锁</translation>
+    </message>
+</context>
+<context>
     <name>main</name>
     <message>
-        <location filename="../assets/main.qml" line="58"/>
+        <location filename="../assets/main.qml" line="67"/>
         <source>Browse</source>
         <translation>浏览视频</translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="98"/>
+        <location filename="../assets/main.qml" line="103"/>
+        <source>Vidme In Motion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/main.qml" line="108"/>
         <source>Featured</source>
         <translation>精选</translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="102"/>
+        <location filename="../assets/main.qml" line="112"/>
         <source>Hot</source>
         <translation>热门</translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="106"/>
+        <location filename="../assets/main.qml" line="116"/>
         <source>Trending</source>
         <translation>趋势</translation>
+    </message>
+    <message>
+        <location filename="../assets/main.qml" line="228"/>
+        <source>Coming Soon</source>
+        <translation>即将推出</translation>
     </message>
     <message>
         <source>Loading...</source>
         <translation type="obsolete">加载中...</translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="79"/>
-        <location filename="../assets/main.qml" line="174"/>
+        <location filename="../assets/main.qml" line="94"/>
+        <location filename="../assets/main.qml" line="194"/>
         <source>Search</source>
         <translation>搜索</translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="186"/>
+        <location filename="../assets/main.qml" line="225"/>
         <source>Nearby</source>
         <translation>附近</translation>
     </message>

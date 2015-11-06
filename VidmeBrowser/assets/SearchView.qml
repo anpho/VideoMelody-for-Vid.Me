@@ -1,11 +1,16 @@
 import bb.cascades 1.4
 
 Page {
+    onPeekStarted: {
+        resetNSFW();
+    }
+    function resetNSFW() {
+        option_nsfw_toggle.enabled = _app.getShowNsfw()
+    }
     property variant nav
     titleBar: TitleBar {
         title: qsTr("Search Videos")
         scrollBehavior: TitleBarScrollBehavior.NonSticky
-
     }
     ScrollView {
         scrollRole: ScrollRole.Main
@@ -50,7 +55,6 @@ Page {
                 topPadding: 20.0
                 bottomPadding: 20.0
                 Container {
-                    visible: _app.getShowNsfw()
                     layout: StackLayout {
                         orientation: LayoutOrientation.LeftToRight
                     }

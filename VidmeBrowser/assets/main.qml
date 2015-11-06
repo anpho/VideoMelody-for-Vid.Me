@@ -20,6 +20,12 @@ import bb.system 1.2
 import cn.anpho 1.0
 import bb.device 1.4
 TabbedPane {
+    onCreationCompleted: {
+        if (_app.getv("password", "").length > 0) {
+            var lock = Qt.createComponent("lock.qml").createObject(rootpane);
+            lock.open();
+        }
+    }
     Menu.definition: MenuDefinition {
         helpAction: HelpActionItem {
             onTriggered: {
@@ -52,6 +58,9 @@ TabbedPane {
     }
     onActiveTabChanged: {
         currentNavpane = activeTab.tabnav
+        if (activeTab.resetNSFW) {
+            activeTab.resetNSFW();
+        }
     }
     Tab {
         property alias tabnav: nav_browse
@@ -64,10 +73,16 @@ TabbedPane {
                 if (page.setActive) {
                     page.setActive();
                 }
+                if (nav_browse.top == page_browse) {
+                    Application.menuEnabled = true
+                }
             }
             onPushTransitionEnded: {
                 if (page.setActive) {
                     page.setActive();
+                }
+                if (nav_browse.top != page_browse) {
+                    Application.menuEnabled = false
                 }
             }
             Page {
@@ -84,6 +99,25 @@ TabbedPane {
                         }
                     }
                 ]
+                titleBar: TitleBar {
+                    title: qsTr("Vidme In Motion")
+                    scrollBehavior: TitleBarScrollBehavior.NonSticky
+                    kind: TitleBarKind.Segmented
+                    options: [
+                        Option {
+                            text: qsTr("Featured")
+                            id: op_featured
+                        },
+                        Option {
+                            text: qsTr("Hot")
+                            id: op_hot
+                        },
+                        Option {
+                            text: qsTr("Trending")
+                            id: op_trending
+                        }
+                    ]
+                }
                 property bool showloadingTips: listview_featured.loading || listview_hot.loading || listview_trending.loading
                 Container {
                     layout: DockLayout {
@@ -92,23 +126,6 @@ TabbedPane {
                     Container {
                         verticalAlignment: VerticalAlignment.Fill
                         horizontalAlignment: HorizontalAlignment.Fill
-                        SegmentedControl {
-                            options: [
-                                Option {
-                                    text: qsTr("Featured")
-                                    id: op_featured
-                                },
-                                Option {
-                                    text: qsTr("Hot")
-                                    id: op_hot
-                                },
-                                Option {
-                                    text: qsTr("Trending")
-                                    id: op_trending
-                                }
-                            ]
-                        }
-
                         VListView {
                             visible: op_featured.selected
                             onVisibleChanged: {
@@ -169,13 +186,35 @@ TabbedPane {
         }
     }
     Tab {
+        function resetNSFW() {
+            search_view.resetNSFW();
+        }
         property alias tabnav: nav_search
         id: tab_search
         title: qsTr("Search")
         imageSource: "asset:///icon/ic_search.png"
         NavigationPane {
             id: nav_search
+            onPushTransitionEnded: {
+                if (page.setActive) {
+                    page.setActive();
+                }
+                if (nav_search.top != search_view) {
+                    Application.menuEnabled = false
+                }
+            }
+            onPopTransitionEnded: {
+                page.destroy();
+                if (page.setActive) {
+                    page.setActive();
+                }
+                if (nav_search.top == search_view) {
+                    Application.menuEnabled = true
+                }
+
+            }
             SearchView {
+                id: search_view
                 nav: nav_search
             }
         }
@@ -186,8 +225,20 @@ TabbedPane {
         title: qsTr("Nearby")
         imageSource: "asset:///icon/ic_map.png"
         enabled: false
+        description: qsTr("Coming Soon")
         NavigationPane {
             id: nav_nearby
+            onPushTransitionEnded: {
+                if (page.setActive) {
+                    page.setActive();
+                }
+            }
+            onPopTransitionEnded: {
+                page.destroy();
+                if (page.setActive) {
+                    page.setActive();
+                }
+            }
             Page {
 
             }

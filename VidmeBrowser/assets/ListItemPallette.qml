@@ -14,13 +14,6 @@ ListItemComponent {
                             itemroot.ListItem.view.requestShare(embed_url);
                         }
                         imageSource: "asset:///icon/ic_share.png"
-                    },
-                    ActionItem {
-                        title: qsTr("Download")
-                        onTriggered: {
-                            var vurl = ListItemData.complete_url;
-                            itemroot.ListItem.view.requestDownload(vurl);
-                        }
                     }
                 ]
             }

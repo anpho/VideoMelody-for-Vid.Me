@@ -101,7 +101,10 @@
     </icon>
 
     <asset path="icon.png">icon.png</asset>
-    <asset path="assets">assets</asset>
+   	<asset path="assets" dest="assets">
+    	assets
+    	<exclude name="**/*.qml"/>
+    </asset>
 
     <!-- Locale support -->
     <asset path="translations" dest="qm">

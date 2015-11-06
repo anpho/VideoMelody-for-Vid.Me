@@ -11,6 +11,7 @@ Page {
         title: qsTr("About")
     }
     actionBarAutoHideBehavior: ActionBarAutoHideBehavior.HideOnScroll
+    actionBarVisibility: ChromeVisibility.Compact
     ScrollView {
         scrollRole: ScrollRole.Main
         Container {
@@ -84,32 +85,9 @@ Page {
                 multiline: true
                 textFormat: TextFormat.Html
             }
-            Header {
-                title: qsTr("UPDATE LOG")
-            }
-            
-            ListView {
-                dataModel: XmlDataModel {
-                    source: "asset:///model/updatelog.xml"
-                }
-                listItemComponents: [
-                    ListItemComponent {
-                        type: "header"
-                        Container {
-                            Header {
-                                subtitle: ListItemData.title
-                            }
-                        }
-                    },
-                    ListItemComponent {
-                        type: "item"
-                        Container {
-                            Label {
-                                text: ListItem.indexInSection + 2 + "," + ListItemData.title
-                            }
-                        }
-                    }
-                ]
+            Divider {
+                opacity: 0.1
+                topMargin: 50.0
 
             }
         }
