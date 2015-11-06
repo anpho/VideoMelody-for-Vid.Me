@@ -44,6 +44,7 @@ class QTranslator;
 class ApplicationUI: public QObject
 {
     Q_OBJECT
+    Q_PROPERTY (bool shownsfw READ getShowNsfw WRITE setShowNsfw RESET resetShowNsfw)
 public:
     ApplicationUI();
     virtual ~ApplicationUI(){};
@@ -51,7 +52,9 @@ public:
     Q_INVOKABLE static void setv(const QString &objectName, const QString &inputValue);
     Q_INVOKABLE static QString getv(const QString &objectName, const QString &defaultValue);
     Q_INVOKABLE void shareURL(const QString &text);
-
+    Q_INVOKABLE void resetShowNsfw();
+    Q_INVOKABLE void setShowNsfw(bool newvalue);
+    Q_INVOKABLE bool getShowNsfw();
 private slots:
     void onSystemLanguageChanged();
     void onSHAREArmed();
@@ -62,6 +65,7 @@ protected:
 private:
     QTranslator* m_pTranslator;
     bb::cascades::LocaleHandler* m_pLocaleHandler;
+    bool m_shownsfw ;
 };
 
 #endif /* ApplicationUI_HPP_ */

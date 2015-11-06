@@ -27,9 +27,15 @@ TabbedPane {
                 currentNavpane.push(aboutpage)
             }
         }
+        settingsAction: SettingsActionItem {
+            onTriggered: {
+                var settingspage = Qt.createComponent("SettingsPage.qml").createObject(currentNavpane);
+                currentNavpane.push(settingspage)
+            }
+        }
     }
     showTabsOnActionBar: false
-    property variant   currentNavpane : nav_browse
+    property variant currentNavpane: nav_browse
     id: rootpane
     attachedObjects: [
         SystemToast {
@@ -173,6 +179,7 @@ TabbedPane {
                 nav: nav_search
             }
         }
+
     }
     Tab {
         property alias tabnav: nav_nearby

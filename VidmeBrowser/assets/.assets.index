@@ -1,5 +1,5 @@
 1
-24
+27
 AboutPage.qml
 Common.qml
 icon/ic_browser.png
@@ -12,13 +12,16 @@ icon/ic_search.png
 icon/ic_share.png
 ListItemPallette.qml
 main.qml
+model/updatelog.xml
 NearbyView.qml
 res/logo_dark_bg.png
 res/logo_light_bg.png
 res/logo_light_bg_powered_by.png
+res/NSFW.png
 res/vid.png
 SearchResultView.qml
 SearchView.qml
+SettingsPage.qml
 splash/1440x1440.png
 splash/720x1280.png
 splash/720x720.png

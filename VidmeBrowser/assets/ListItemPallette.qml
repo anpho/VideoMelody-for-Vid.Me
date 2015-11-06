@@ -97,10 +97,10 @@ ListItemComponent {
             implicitLayoutAnimationsEnabled: false
             WebImageView {
                 id: thumbnail
-                url: ListItemData.thumbnail_url
                 scalingMethod: ScalingMethod.AspectFill
                 loadEffect: ImageViewLoadEffect.FadeZoom
                 implicitLayoutAnimationsEnabled: false
+                url: ListItemData.thumbnail_url
             }
         }
         // video area ended.

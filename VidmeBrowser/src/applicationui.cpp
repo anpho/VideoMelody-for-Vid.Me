@@ -33,7 +33,7 @@ ApplicationUI::ApplicationUI() :
     m_pTranslator = new QTranslator(this);
     m_pLocaleHandler = new LocaleHandler(this);
     m_pInvokeManager = new InvokeManager(this);
-
+    resetShowNsfw();
     bool res = QObject::connect(m_pLocaleHandler, SIGNAL(systemLanguageChanged()), this,
             SLOT(onSystemLanguageChanged()));
     // This is only available in Debug builds
@@ -130,3 +130,16 @@ void ApplicationUI::onFinished()
     invocation->deleteLater();
 }
 
+void ApplicationUI::resetShowNsfw()
+{
+    m_shownsfw = getv("show_nsfw", "no").compare("yes") == 0;
+}
+void ApplicationUI::setShowNsfw(bool newvalue)
+{
+    setv("show_nsfw", newvalue ? "yes" : "no");
+    resetShowNsfw();
+}
+bool ApplicationUI::getShowNsfw()
+{
+    return m_shownsfw;
+}

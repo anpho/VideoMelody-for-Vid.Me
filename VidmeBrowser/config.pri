@@ -42,6 +42,7 @@ config_pri_assets {
         $$quote($$BASEDIR/assets/NearbyView.qml) \
         $$quote($$BASEDIR/assets/SearchResultView.qml) \
         $$quote($$BASEDIR/assets/SearchView.qml) \
+        $$quote($$BASEDIR/assets/SettingsPage.qml) \
         $$quote($$BASEDIR/assets/VListView.qml) \
         $$quote($$BASEDIR/assets/icon/ic_browser.png) \
         $$quote($$BASEDIR/assets/icon/ic_copy_link.png) \
@@ -52,6 +53,8 @@ config_pri_assets {
         $$quote($$BASEDIR/assets/icon/ic_search.png) \
         $$quote($$BASEDIR/assets/icon/ic_share.png) \
         $$quote($$BASEDIR/assets/main.qml) \
+        $$quote($$BASEDIR/assets/model/updatelog.xml) \
+        $$quote($$BASEDIR/assets/res/NSFW.png) \
         $$quote($$BASEDIR/assets/res/logo_dark_bg.png) \
         $$quote($$BASEDIR/assets/res/logo_light_bg.png) \
         $$quote($$BASEDIR/assets/res/logo_light_bg_powered_by.png) \
@@ -90,6 +93,9 @@ lupdate_inclusion {
         $$quote($$BASEDIR/../assets/icon/*.qml) \
         $$quote($$BASEDIR/../assets/icon/*.js) \
         $$quote($$BASEDIR/../assets/icon/*.qs) \
+        $$quote($$BASEDIR/../assets/model/*.qml) \
+        $$quote($$BASEDIR/../assets/model/*.js) \
+        $$quote($$BASEDIR/../assets/model/*.qs) \
         $$quote($$BASEDIR/../assets/res/*.qml) \
         $$quote($$BASEDIR/../assets/res/*.js) \
         $$quote($$BASEDIR/../assets/res/*.qs) \

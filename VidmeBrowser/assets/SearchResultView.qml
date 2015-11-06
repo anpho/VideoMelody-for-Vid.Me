@@ -23,7 +23,23 @@ Page {
                                 results_count = ": " + d.page.total;
                                 listview_search.page = d.page;
                                 listview_search.offset = d.page.offset + d.page.limit
-                                dm_search.append(d.videos);
+
+                                // nsfw filter
+                                if (_app.getShowNsfw()) {
+                                    dm_search.append(d.videos);
+                                } else {
+                                    var cleanVideos = [];
+                                    for (var i = 0; i < d.videos.length; i ++) {
+                                        if (d.videos[i].nsfw) {
+                                            continue;
+                                        } else {
+                                            cleanVideos.push(d.videos[i])
+                                        }
+                                    }
+                                    dm_search.append(cleanVideos);
+                                }
+                                //
+
                                 listview_search.loading = false;
                             } else {
                                 listview_search.loading = false;

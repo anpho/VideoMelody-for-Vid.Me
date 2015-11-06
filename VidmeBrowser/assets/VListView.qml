@@ -5,16 +5,16 @@ ListView {
     id: listview_root
     // show toast message, this signal is used to pass the toast request outside.
     signal toast(string msg)
-    
+
     // base url of data source
     property string baseurl
-    
+
     // data offset, see api doc.
     property int offset: 0
-    
+
     // indicate whether data source is loading
     property bool loading: false
-    
+
     // for PULL TO REFRESH usage.
     function reset() {
         offset = 0;
@@ -22,7 +22,7 @@ ListView {
         loading = true;
         ds.load();
     }
-    
+
     // invoke video player
     function requestVideoPlayer(title, uri, image) {
         console.log("Playing %1, %2, %3".arg(title).arg(uri).arg(image));
@@ -54,8 +54,22 @@ ListView {
             type: DataSourceType.Json
             onDataLoaded: {
                 if (data.status) {
+                    var show_nsfw =_app.getShowNsfw();
                     listview_root.offset = data.page.offset + data.page.limit
-                    adm.append(data.videos);
+                    if (show_nsfw) {
+                        adm.append(data.videos);
+                    } else {
+                        var cleanVideos = [];
+                        for (var i = 0; i < data.videos.length; i ++) {
+                            if (data.videos[i].nsfw) {
+                                continue;
+                            } else {
+                                cleanVideos.push(data.videos[i])
+                            }
+                        }
+                        adm.append(cleanVideos);
+                    }
+
                     listview_root.loading = false;
                 } else {
                     listview_root.loading = false;

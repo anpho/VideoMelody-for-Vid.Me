@@ -50,6 +50,7 @@ Page {
                 topPadding: 20.0
                 bottomPadding: 20.0
                 Container {
+                    visible: _app.getShowNsfw()
                     layout: StackLayout {
                         orientation: LayoutOrientation.LeftToRight
                     }

@@ -1,6 +1,12 @@
 import bb.cascades 1.4
+import bb 1.0
 
 Page {
+    attachedObjects: [
+        PackageInfo {
+            id: pi
+        }
+    ]
     titleBar: TitleBar {
         title: qsTr("About")
     }
@@ -9,7 +15,7 @@ Page {
         scrollRole: ScrollRole.Main
         Container {
             Header {
-                title: qsTr("APPLICATION")
+                title: qsTr("APP INFORMATION")
             }
 
             ImageView {
@@ -21,13 +27,18 @@ Page {
                 horizontalAlignment: HorizontalAlignment.Center
             }
             Label {
+                horizontalAlignment: HorizontalAlignment.Fill
+                text: pi.version
+                textStyle.textAlign: TextAlign.Center
+            }
+            Label {
                 text: qsTr("This app is built as BlackBerry 10 client for vidme.")
                 textStyle.fontWeight: FontWeight.W100
                 textStyle.textAlign: TextAlign.Center
                 horizontalAlignment: HorizontalAlignment.Fill
             }
             Header {
-                title: qsTr("VID.ME")
+                title: qsTr("VID.ME TERMS")
             }
             Label {
                 text: qsTr("<a href='https://vid.me/terms-of-use'>Terms of use</a>")
@@ -62,7 +73,7 @@ Page {
                 textFormat: TextFormat.Html
             }
             Header {
-                title: qsTr("DEVELOPERS")
+                title: qsTr("DEV TEAM")
             }
 
             Label {
@@ -73,8 +84,33 @@ Page {
                 multiline: true
                 textFormat: TextFormat.Html
             }
-            Divider {
-                topMargin: ui.du(5)
+            Header {
+                title: qsTr("UPDATE LOG")
+            }
+            
+            ListView {
+                dataModel: XmlDataModel {
+                    source: "asset:///model/updatelog.xml"
+                }
+                listItemComponents: [
+                    ListItemComponent {
+                        type: "header"
+                        Container {
+                            Header {
+                                subtitle: ListItemData.title
+                            }
+                        }
+                    },
+                    ListItemComponent {
+                        type: "item"
+                        Container {
+                            Label {
+                                text: ListItem.indexInSection + 2 + "," + ListItemData.title
+                            }
+                        }
+                    }
+                ]
+
             }
         }
     }
