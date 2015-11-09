@@ -1,0 +1,16 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+<qresource>
+<file>assets/AboutPage.qml</file>
+<file>assets/ListItemPallette.qml</file>
+<file>assets/Common.qml</file>
+<file>assets/lock.qml</file>
+<file>assets/main.qml</file>
+<file>assets/NearbyView.qml</file>
+<file>assets/SearchResultView.qml</file>
+<file>assets/SearchView.qml</file>
+<file>assets/SettingsPage.qml</file>
+<file>assets/VideoDetails.qml</file>
+<file>assets/VListView.qml</file>
+</qresource>
+</RCC>

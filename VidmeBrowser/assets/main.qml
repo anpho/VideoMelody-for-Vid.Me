@@ -39,6 +39,15 @@ TabbedPane {
                 currentNavpane.push(settingspage)
             }
         }
+        actions: [
+            ActionItem {
+                title: qsTr("Rate")
+                imageSource: "asset:///icon/ic_edit_bookmarks.png"
+                onTriggered: {
+                    Qt.openUrlExternally("appworld://content/59983323");
+                }
+            }
+        ]
     }
     showTabsOnActionBar: false
     property variant currentNavpane: nav_browse
@@ -100,7 +109,7 @@ TabbedPane {
                     }
                 ]
                 titleBar: TitleBar {
-                    title: qsTr("Vidme In Motion")
+                    title: qsTr("Home")
                     scrollBehavior: TitleBarScrollBehavior.NonSticky
                     kind: TitleBarKind.Segmented
                     options: [

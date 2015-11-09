@@ -330,43 +330,48 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="../assets/main.qml" line="67"/>
+        <location filename="../assets/main.qml" line="76"/>
         <source>Browse</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="103"/>
-        <source>Vidme In Motion</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../assets/main.qml" line="108"/>
+        <location filename="../assets/main.qml" line="117"/>
         <source>Featured</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="112"/>
+        <location filename="../assets/main.qml" line="121"/>
         <source>Hot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="116"/>
+        <location filename="../assets/main.qml" line="125"/>
         <source>Trending</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="228"/>
+        <location filename="../assets/main.qml" line="237"/>
         <source>Coming Soon</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="94"/>
-        <location filename="../assets/main.qml" line="194"/>
+        <location filename="../assets/main.qml" line="103"/>
+        <location filename="../assets/main.qml" line="203"/>
         <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="225"/>
+        <location filename="../assets/main.qml" line="44"/>
+        <source>Rate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/main.qml" line="112"/>
+        <source>Home</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/main.qml" line="234"/>
         <source>Nearby</source>
         <translation type="unfinished"></translation>
     </message>

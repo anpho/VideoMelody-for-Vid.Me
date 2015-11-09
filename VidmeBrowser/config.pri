@@ -47,6 +47,7 @@ config_pri_assets {
         $$quote($$BASEDIR/assets/VideoDetails.qml) \
         $$quote($$BASEDIR/assets/icon/ic_browser.png) \
         $$quote($$BASEDIR/assets/icon/ic_copy_link.png) \
+        $$quote($$BASEDIR/assets/icon/ic_edit_bookmarks.png) \
         $$quote($$BASEDIR/assets/icon/ic_help.png) \
         $$quote($$BASEDIR/assets/icon/ic_home.png) \
         $$quote($$BASEDIR/assets/icon/ic_info.png) \
