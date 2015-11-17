@@ -55,7 +55,7 @@
 
     <!-- Fourth digit segment of the package version. First three segments are taken from the
          <versionNumber> element.  Must be an integer from 0 to 2^16-1 -->
-    <buildId>1116</buildId>
+    <buildId>1117</buildId>
     <packageLocale>zh-CN</packageLocale>
 
     <!-- A string value (such as "v1", "2.5", or "Alpha 1") that represents the version of the application, as it should be shown to users. Optional. -->
@@ -69,10 +69,10 @@
 
     <!--  Name of author which is used for signing. Must match the developer name of your development certificate. -->
     <name>
-       VidPlay
+       Video Melody
        
        
-       <text xml:lang="zh-CN">VidPlay &#x89c6;&#x9891;&#x6d4f;&#x89c8;&#x5668;</text>
+       <text xml:lang="zh-CN">Video Melody</text>
     </name>
     <description>
        Vid.me Browser
