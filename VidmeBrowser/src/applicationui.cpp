@@ -22,6 +22,8 @@
 #include <bb/cascades/LocaleHandler>
 #include <bb/system/InvokeManager>
 #include <bb/PpsObject>
+#include <bb/cascades/SceneCover>
+#include <bb/cascades/Container>
 #include "qnamespace.h"
 using namespace bb::cascades;
 using namespace bb::system;
@@ -53,6 +55,14 @@ ApplicationUI::ApplicationUI() :
     // Set created root object as the application scene
     Application::instance()->setScene(root);
 
+    //set application cover
+    QmlDocument *qmlCover = QmlDocument::create("qrc:/assets/cover.qml").parent(this);
+
+    // Create the QML Container from using the QMLDocument
+    Container *coverContainer = qmlCover->createRootObject<Container>();
+    // Create a SceneCover and set the app cover
+    SceneCover *sceneCover = SceneCover::create().content(coverContainer);
+    Application::instance()->setCover(sceneCover);
 }
 
 void ApplicationUI::onSystemLanguageChanged()

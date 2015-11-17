@@ -12,5 +12,6 @@
 <file>assets/SettingsPage.qml</file>
 <file>assets/VideoDetails.qml</file>
 <file>assets/VListView.qml</file>
+<file>assets/cover.qml</file>
 </qresource>
 </RCC>
