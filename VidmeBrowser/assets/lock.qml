@@ -2,10 +2,32 @@ import bb.cascades 1.4
 Sheet {
     id: sheetroot
     peekEnabled: false
+    onCreationCompleted: {
+        input_password.requestFocus()
+        anim.play()
+    }
+    attachedObjects: [
+        SequentialAnimation {
+            id: anim
+            target: appimage
+            repeatCount: Infinity
+            animations: [
+                FadeTransition {
+                    target: appimage
+                    toOpacity: 0.2
+                    fromOpacity: 1.0
+                },
+                FadeTransition {
+                    target: appimage
+                    toOpacity: 1.0
+                    fromOpacity: 0.2
+                }
+            ]
+        }
+    ]
     Page {
         titleBar: TitleBar {
             title: qsTr("Application Locked")
-
         }
         Container {
             topPadding: 50.0
@@ -13,11 +35,11 @@ Sheet {
             rightPadding: 40.0
             bottomPadding: 50.0
             ImageView {
+                id: appimage
                 imageSource: "asset:///res/vid.png"
                 scalingMethod: ScalingMethod.AspectFit
                 verticalAlignment: VerticalAlignment.Center
                 horizontalAlignment: HorizontalAlignment.Center
-                filterColor: Color.LightGray
                 preferredHeight: ui.du(20)
             }
             Label {

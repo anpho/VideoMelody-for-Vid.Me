@@ -14,6 +14,14 @@ ListItemComponent {
                             itemroot.ListItem.view.requestShare(embed_url);
                         }
                         imageSource: "asset:///icon/ic_share.png"
+                    },
+                    ActionItem {
+                        title: qsTr("Open Via...")
+                        imageSource: "asset:///icon/ic_forward.png"
+                        onTriggered: {
+                            var videourl = ListItemData.complete_url
+                            itemroot.ListItem.view.requestOpen(videourl);
+                        }
                     }
                 ]
             }
@@ -43,7 +51,7 @@ ListItemComponent {
                 preferredWidth: ui.du(8)
             }
             Label {
-                text: ListItemData.user ? ListItemData.user.username : ""
+                text: ListItemData.user ? ListItemData.user.username : qsTr("Anonymous")
                 layoutProperties: StackLayoutProperties {
                     spaceQuota: 5.0
                 }
@@ -88,12 +96,25 @@ ListItemComponent {
             }
             horizontalAlignment: HorizontalAlignment.Fill
             implicitLayoutAnimationsEnabled: false
+            layout: DockLayout {
+
+            }
             WebImageView {
                 id: thumbnail
                 scalingMethod: ScalingMethod.AspectFill
                 loadEffect: ImageViewLoadEffect.FadeZoom
                 implicitLayoutAnimationsEnabled: false
                 url: ListItemData.thumbnail_url
+                verticalAlignment: VerticalAlignment.Fill
+                horizontalAlignment: HorizontalAlignment.Fill
+                visible: ListItemData.nsfw ? itemroot.ListItem.view.isShowNSFWCover() ? false : true : true
+            }
+            ImageView {
+                imageSource: "asset:///res/NSFW.gif"
+                scalingMethod: ScalingMethod.AspectFill
+                visible: ListItemData.nsfw && itemroot.ListItem.view.isShowNSFWCover()
+                verticalAlignment: VerticalAlignment.Fill
+                horizontalAlignment: HorizontalAlignment.Fill
             }
         }
         // video area ended.

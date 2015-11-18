@@ -94,7 +94,49 @@ Page {
                     textStyle.fontSize: FontSize.XSmall
                 }
                 Label {
-                    text: qsTr("*App restart is highly recommended.")
+                    text: qsTr("*App restart is required.")
+                    textStyle.fontWeight: FontWeight.W100
+                    textStyle.fontSize: FontSize.XSmall
+                    textStyle.color: Color.create("#ff0082aa")
+                }
+
+            }
+            Container {
+                layout: StackLayout {
+                    orientation: LayoutOrientation.LeftToRight
+
+                }
+                topPadding: 20.0
+                leftPadding: 40.0
+                rightPadding: 40.0
+                bottomPadding: 20.0
+                Label {
+                    text: qsTr("Use NSFW Cover")
+                    verticalAlignment: VerticalAlignment.Center
+                    layoutProperties: StackLayoutProperties {
+                        spaceQuota: 1.0
+                    }
+                }
+                ToggleButton {
+                    checked: _app.getShowNsfwCOVER()
+                    onCheckedChanged: {
+                        _app.setShowNsfwCOVER(checked);
+                    }
+                }
+
+            }
+            Container {
+                leftPadding: 40.0
+                rightPadding: 40.0
+                bottomPadding: 20.0
+                Label {
+                    multiline: true
+                    text: qsTr("Replace NSFW video preview with a WARNING image.")
+                    textStyle.fontWeight: FontWeight.W100
+                    textStyle.fontSize: FontSize.XSmall
+                }
+                Label {
+                    text: qsTr("*App restart is required.")
                     textStyle.fontWeight: FontWeight.W100
                     textStyle.fontSize: FontSize.XSmall
                     textStyle.color: Color.create("#ff0082aa")
@@ -114,7 +156,7 @@ Page {
                 bottomPadding: 20.0
                 topPadding: 20
                 Label {
-                    text: qsTr("You'll be requested to type password during app startup")
+                    text: qsTr("You'll be requested to type password during app startup, leave it empty to disable this feature.")
                     multiline: true
                     textStyle.fontWeight: FontWeight.W100
                     textStyle.fontSize: FontSize.XSmall
@@ -163,42 +205,41 @@ Page {
                     }
                 }
             }
-            //            Container {
-            //                layout: StackLayout {
-            //                    orientation: LayoutOrientation.LeftToRight
-            //
-            //                }
-            //                topPadding: 20.0
-            //                leftPadding: 40.0
-            //                rightPadding: 40.0
-            //                bottomPadding: 20.0
-            //                Label {
-            //                    text: qsTr("Replace NSFW Preview")
-            //                    verticalAlignment: VerticalAlignment.Center
-            //                    layoutProperties: StackLayoutProperties {
-            //                        spaceQuota: 1.0
-            //                    }
-            //                }
-            //                ToggleButton {
-            //                    enabled: toggle_shownsfw.checked
-            //                    checked: _app.getv("replace_nsfw_preview", "yes") === "yes"
-            //                    onCheckedChanged: {
-            //                        checked ? _app.setv("replace_nsfw_preview", "yes") : _app.setv("replace_nsfw_preview", "no")
-            //                    }
-            //                }
-            //            }
-            //            Container {
-            //                leftPadding: 40.0
-            //                rightPadding: 40.0
-            //                bottomPadding: 20.0
-            //                Label {
-            //                    multiline: true
-            //                    text: qsTr("This option will include NSFW content but replace the NSFW preview image to warning image.")
-            //                    textStyle.fontWeight: FontWeight.W100
-            //                    textStyle.fontSize: FontSize.XSmall
-            //
-            //                }
-            //            }
+//            Container {
+//                layout: StackLayout {
+//                    orientation: LayoutOrientation.LeftToRight
+//
+//                }
+//                topPadding: 20.0
+//                leftPadding: 40.0
+//                rightPadding: 40.0
+//                bottomPadding: 20.0
+//                Label {
+//                    text: qsTr("Lock When Minimized")
+//                    verticalAlignment: VerticalAlignment.Center
+//                    layoutProperties: StackLayoutProperties {
+//                        spaceQuota: 1.0
+//                    }
+//                }
+//                ToggleButton {
+//                    enabled: input_password.text.length > 0
+//                    checked: _app.getv("autolock", "false") === "true"
+//                    onCheckedChanged: {
+//                        _app.setv("autolock", checked);
+//                    }
+//                }
+//            }
+//            Container {
+//                leftPadding: 40.0
+//                rightPadding: 40.0
+//                bottomPadding: 20.0
+//                Label {
+//                    multiline: true
+//                    text: qsTr("Lock this app automatically when it's minimized. Password is required for this to take action.")
+//                    textStyle.fontWeight: FontWeight.W100
+//                    textStyle.fontSize: FontSize.XSmall
+//                }
+//            }
             Header {
                 title: qsTr("ADVANCED FEATURES")
             }

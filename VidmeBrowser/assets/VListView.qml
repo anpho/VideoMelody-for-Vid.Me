@@ -32,6 +32,12 @@ ListView {
     function requestShare(uri) {
         _app.shareURL(uri);
     }
+    function isShowNSFWCover() {
+        return _app.getShowNsfwCOVER();
+    }
+    function requestOpen(uri) {
+        _app.openURL(uri);
+    }
     // invoke download
     function requestDownload(uri) {
         toast("Not implemented yet.");
@@ -54,7 +60,7 @@ ListView {
             type: DataSourceType.Json
             onDataLoaded: {
                 if (data.status) {
-                    var show_nsfw =_app.getShowNsfw();
+                    var show_nsfw = _app.getShowNsfw();
                     listview_root.offset = data.page.offset + data.page.limit
                     if (show_nsfw) {
                         adm.append(data.videos);

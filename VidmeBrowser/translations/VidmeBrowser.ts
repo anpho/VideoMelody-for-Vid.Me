@@ -62,22 +62,32 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ListItemPallette.qml" line="132"/>
+        <location filename="../assets/ListItemPallette.qml" line="19"/>
+        <source>Open Via...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/ListItemPallette.qml" line="54"/>
+        <source>Anonymous</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/ListItemPallette.qml" line="153"/>
         <source>Duration</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ListItemPallette.qml" line="155"/>
+        <location filename="../assets/ListItemPallette.qml" line="176"/>
         <source>Comments</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ListItemPallette.qml" line="178"/>
+        <location filename="../assets/ListItemPallette.qml" line="199"/>
         <source>Viewed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ListItemPallette.qml" line="201"/>
+        <location filename="../assets/ListItemPallette.qml" line="222"/>
         <source>Liked</source>
         <translation type="unfinished"></translation>
     </message>
@@ -103,57 +113,57 @@
 <context>
     <name>SearchView</name>
     <message>
-        <location filename="../assets/SearchView.qml" line="12"/>
+        <location filename="../assets/SearchView.qml" line="15"/>
         <source>Search Videos</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/SearchView.qml" line="29"/>
+        <location filename="../assets/SearchView.qml" line="32"/>
         <source>QUERY FOR</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/SearchView.qml" line="33"/>
+        <location filename="../assets/SearchView.qml" line="36"/>
         <source>What are you looking for ?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/SearchView.qml" line="50"/>
+        <location filename="../assets/SearchView.qml" line="53"/>
         <source>OPTIONS</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/SearchView.qml" line="62"/>
+        <location filename="../assets/SearchView.qml" line="66"/>
         <source>Include NSFW Content</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/SearchView.qml" line="78"/>
+        <location filename="../assets/SearchView.qml" line="82"/>
         <source>Likes Count</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/SearchView.qml" line="82"/>
+        <location filename="../assets/SearchView.qml" line="86"/>
         <source>Hot Score</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/SearchView.qml" line="86"/>
+        <location filename="../assets/SearchView.qml" line="90"/>
         <source>Score</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/SearchView.qml" line="90"/>
+        <location filename="../assets/SearchView.qml" line="94"/>
         <source>Date</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/SearchView.qml" line="94"/>
+        <location filename="../assets/SearchView.qml" line="98"/>
         <source>Sort By</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/SearchView.qml" line="107"/>
+        <location filename="../assets/SearchView.qml" line="111"/>
         <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
@@ -186,11 +196,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/SettingsPage.qml" line="97"/>
-        <source>*App restart is highly recommended.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../assets/SettingsPage.qml" line="72"/>
         <source>Include NSFW Content</source>
         <translation type="unfinished"></translation>
@@ -201,92 +206,108 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/SettingsPage.qml" line="104"/>
-        <source>WARNING: Some NSFW videos are not been tagged as NSFW for now, so you may still see it in Search Results sometimes. Please enable app lock below.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../assets/SettingsPage.qml" line="109"/>
-        <source>APP LOCK</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../assets/SettingsPage.qml" line="117"/>
-        <source>You&apos;ll be requested to type password during app startup</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../assets/SettingsPage.qml" line="124"/>
-        <source>Password</source>
+        <location filename="../assets/SettingsPage.qml" line="134"/>
+        <source>Replace NSFW video preview with a WARNING image.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../assets/SettingsPage.qml" line="146"/>
-        <source>Set</source>
+        <source>WARNING: Some NSFW videos are not been tagged as NSFW for now, so you may still see it in Search Results sometimes. Please enable app lock below.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/SettingsPage.qml" line="114"/>
+        <source>Use NSFW Cover</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/SettingsPage.qml" line="97"/>
+        <location filename="../assets/SettingsPage.qml" line="139"/>
+        <source>*App restart is required.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../assets/SettingsPage.qml" line="151"/>
+        <source>APP LOCK</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/SettingsPage.qml" line="159"/>
+        <source>You&apos;ll be requested to type password during app startup, leave it empty to disable this feature.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/SettingsPage.qml" line="166"/>
+        <source>Password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/SettingsPage.qml" line="188"/>
+        <source>Set</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/SettingsPage.qml" line="193"/>
         <source>Password Set</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/SettingsPage.qml" line="156"/>
+        <location filename="../assets/SettingsPage.qml" line="198"/>
         <source>Clear</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/SettingsPage.qml" line="160"/>
+        <location filename="../assets/SettingsPage.qml" line="202"/>
         <source>Password Cleared.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/SettingsPage.qml" line="203"/>
+        <location filename="../assets/SettingsPage.qml" line="244"/>
         <source>ADVANCED FEATURES</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/SettingsPage.qml" line="215"/>
+        <location filename="../assets/SettingsPage.qml" line="256"/>
         <source>Enable Quick Translation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/SettingsPage.qml" line="232"/>
+        <location filename="../assets/SettingsPage.qml" line="273"/>
         <source>Translate to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/SettingsPage.qml" line="235"/>
+        <location filename="../assets/SettingsPage.qml" line="276"/>
         <source>Simp-Chinese</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/SettingsPage.qml" line="240"/>
+        <location filename="../assets/SettingsPage.qml" line="281"/>
         <source>English</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/SettingsPage.qml" line="248"/>
+        <location filename="../assets/SettingsPage.qml" line="289"/>
         <source>*Will be available soon.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/SettingsPage.qml" line="256"/>
+        <location filename="../assets/SettingsPage.qml" line="297"/>
         <source>MISC.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/SettingsPage.qml" line="269"/>
+        <location filename="../assets/SettingsPage.qml" line="310"/>
         <source>This app automatically stores web images to local storage ( 50M Bytes at most ) , so typically you won&apos;t need to clear the cache manually. If you really want to, here&apos;s a button:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/SettingsPage.qml" line="284"/>
+        <location filename="../assets/SettingsPage.qml" line="325"/>
         <source>CLEAR IMAGE CACHE</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/SettingsPage.qml" line="290"/>
+        <location filename="../assets/SettingsPage.qml" line="331"/>
         <source>Cache Cleared.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -294,12 +315,12 @@
 <context>
     <name>VListView</name>
     <message>
-        <location filename="../assets/VListView.qml" line="76"/>
+        <location filename="../assets/VListView.qml" line="82"/>
         <source>Error occurred, %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/VListView.qml" line="81"/>
+        <location filename="../assets/VListView.qml" line="87"/>
         <source>Server unreachable</source>
         <translation type="unfinished"></translation>
     </message>
@@ -307,22 +328,22 @@
 <context>
     <name>lock</name>
     <message>
-        <location filename="../assets/lock.qml" line="7"/>
+        <location filename="../assets/lock.qml" line="30"/>
         <source>Application Locked</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/lock.qml" line="24"/>
+        <location filename="../assets/lock.qml" line="46"/>
         <source>Password Incorrect</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/lock.qml" line="37"/>
+        <location filename="../assets/lock.qml" line="59"/>
         <source>Password Required</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/lock.qml" line="53"/>
+        <location filename="../assets/lock.qml" line="75"/>
         <source>Unlock</source>
         <translation type="unfinished"></translation>
     </message>
@@ -330,33 +351,33 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="../assets/main.qml" line="76"/>
+        <location filename="../assets/main.qml" line="87"/>
         <source>Browse</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="117"/>
+        <location filename="../assets/main.qml" line="128"/>
         <source>Featured</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="121"/>
+        <location filename="../assets/main.qml" line="132"/>
         <source>Hot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="125"/>
+        <location filename="../assets/main.qml" line="136"/>
         <source>Trending</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="237"/>
+        <location filename="../assets/main.qml" line="248"/>
         <source>Coming Soon</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="103"/>
-        <location filename="../assets/main.qml" line="203"/>
+        <location filename="../assets/main.qml" line="114"/>
+        <location filename="../assets/main.qml" line="214"/>
         <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
@@ -366,12 +387,22 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="112"/>
+        <location filename="../assets/main.qml" line="51"/>
+        <source>Lock</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/main.qml" line="58"/>
+        <source>Password not set</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/main.qml" line="123"/>
         <source>Home</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="234"/>
+        <location filename="../assets/main.qml" line="245"/>
         <source>Nearby</source>
         <translation type="unfinished"></translation>
     </message>

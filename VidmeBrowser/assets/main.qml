@@ -46,6 +46,18 @@ TabbedPane {
                 onTriggered: {
                     Qt.openUrlExternally("appworld://content/59983323");
                 }
+            },
+            ActionItem {
+                title: qsTr("Lock")
+                imageSource: "asset:///icon/ic_lock.png"
+                onTriggered: {
+                    if (_app.getv("password", "").length > 0) {
+                        var lock = Qt.createComponent("lock.qml").createObject(rootpane);
+                        lock.open();
+                    } else {
+                        errorToast(qsTr("Password not set"))
+                    }
+                }
             }
         ]
     }
@@ -60,7 +72,6 @@ TabbedPane {
             id: di
         }
     ]
-
     function errorToast(msg) {
         sst.body = msg;
         sst.show()

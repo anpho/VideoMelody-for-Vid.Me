@@ -49,15 +49,17 @@ config_pri_assets {
         $$quote($$BASEDIR/assets/icon/ic_browser.png) \
         $$quote($$BASEDIR/assets/icon/ic_copy_link.png) \
         $$quote($$BASEDIR/assets/icon/ic_edit_bookmarks.png) \
+        $$quote($$BASEDIR/assets/icon/ic_forward.png) \
         $$quote($$BASEDIR/assets/icon/ic_help.png) \
         $$quote($$BASEDIR/assets/icon/ic_home.png) \
         $$quote($$BASEDIR/assets/icon/ic_info.png) \
+        $$quote($$BASEDIR/assets/icon/ic_lock.png) \
         $$quote($$BASEDIR/assets/icon/ic_map.png) \
         $$quote($$BASEDIR/assets/icon/ic_search.png) \
         $$quote($$BASEDIR/assets/icon/ic_share.png) \
         $$quote($$BASEDIR/assets/lock.qml) \
         $$quote($$BASEDIR/assets/main.qml) \
-        $$quote($$BASEDIR/assets/res/NSFW.png) \
+        $$quote($$BASEDIR/assets/res/NSFW.gif) \
         $$quote($$BASEDIR/assets/res/logo_dark_bg.png) \
         $$quote($$BASEDIR/assets/res/logo_light_bg.png) \
         $$quote($$BASEDIR/assets/res/logo_light_bg_powered_by.png) \

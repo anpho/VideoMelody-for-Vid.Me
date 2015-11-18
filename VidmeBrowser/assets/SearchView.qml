@@ -5,7 +5,10 @@ Page {
         resetNSFW();
     }
     function resetNSFW() {
-        option_nsfw_toggle.enabled = _app.getShowNsfw()
+        nsfwtoggleControl.visible = _app.getShowNsfw();
+        if (! _app.getShowNsfw()) {
+            option_nsfw_toggle.checked = false
+        }
     }
     property variant nav
     titleBar: TitleBar {
@@ -55,6 +58,7 @@ Page {
                 topPadding: 20.0
                 bottomPadding: 20.0
                 Container {
+                    id: nsfwtoggleControl
                     layout: StackLayout {
                         orientation: LayoutOrientation.LeftToRight
                     }

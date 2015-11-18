@@ -78,6 +78,7 @@ void ApplicationUI::onSystemLanguageChanged()
 
 void ApplicationUI::invokeVideo(const QString &title, const QString &url, const QString &imageurl)
 {
+    Q_UNUSED(imageurl);
     InvokeRequest cardRequest;
     cardRequest.setTarget("sys.mediaplayer.previewer");
     cardRequest.setAction("bb.action.VIEW");
@@ -127,6 +128,23 @@ void ApplicationUI::onSHAREArmed()
     invocation->trigger("bb.action.SHARE");
 }
 
+void ApplicationUI::openURL(const QString &text)
+{
+    InvokeQuery *query = InvokeQuery::create().uri(text.toUtf8());
+    Invocation *invocation = Invocation::create(query);
+    query->setParent(invocation); // destroy query with invocation
+    invocation->setParent(this); // app can be destroyed before onFinished() is called
+
+    connect(invocation, SIGNAL(armed()), this, SLOT(onOPENArmed()));
+    connect(invocation, SIGNAL(finished()), this, SLOT(onFinished()));
+}
+
+void ApplicationUI::onOPENArmed()
+{
+    Invocation *invocation = qobject_cast<Invocation *>(sender());
+    invocation->trigger("bb.action.OPEN");
+}
+
 void ApplicationUI::onViewArmed()
 {
     Invocation *invocation = qobject_cast<Invocation *>(sender());
@@ -151,4 +169,17 @@ void ApplicationUI::setShowNsfw(bool newvalue)
 bool ApplicationUI::getShowNsfw()
 {
     return m_shownsfw;
+}
+void ApplicationUI::resetShowNsfwCOVER()
+{
+    m_shownsfwcover = getv("use_nsfw_cover", "true").compare("true") == 0;
+}
+void ApplicationUI::setShowNsfwCOVER(bool newvalue)
+{
+    setv("use_nsfw_cover", newvalue?"true":"false");
+    resetShowNsfwCOVER();
+}
+bool ApplicationUI::getShowNsfwCOVER()
+{
+    return m_shownsfwcover;
 }
