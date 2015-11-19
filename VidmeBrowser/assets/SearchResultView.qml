@@ -97,6 +97,12 @@ Page {
             function requestShare(uri) {
                 _app.shareURL(uri);
             }
+            function isShowNSFWCover() {
+                return _app.getShowNsfwCOVER();
+            }
+            function requestOpen(uri) {
+                _app.openURL(uri);
+            }
             function requestDownload(uri) {
                 rootpane.errorToast("Not implemented yet.")
             }

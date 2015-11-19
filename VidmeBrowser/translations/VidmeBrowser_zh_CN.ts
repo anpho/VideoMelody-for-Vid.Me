@@ -66,8 +66,12 @@
         <translation type="obsolete">下载（尚未实现）</translation>
     </message>
     <message>
-        <location filename="../assets/ListItemPallette.qml" line="19"/>
         <source>Open Via...</source>
+        <translation type="obsolete">打开方式...</translation>
+    </message>
+    <message>
+        <location filename="../assets/ListItemPallette.qml" line="19"/>
+        <source>Open With...</source>
         <translation>打开方式...</translation>
     </message>
     <message>

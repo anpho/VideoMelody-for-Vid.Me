@@ -63,7 +63,7 @@
     </message>
     <message>
         <location filename="../assets/ListItemPallette.qml" line="19"/>
-        <source>Open Via...</source>
+        <source>Open With...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

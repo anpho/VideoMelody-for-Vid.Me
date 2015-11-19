@@ -36,6 +36,7 @@ ApplicationUI::ApplicationUI() :
     m_pLocaleHandler = new LocaleHandler(this);
     m_pInvokeManager = new InvokeManager(this);
     resetShowNsfw();
+    resetShowNsfwCOVER();
     bool res = QObject::connect(m_pLocaleHandler, SIGNAL(systemLanguageChanged()), this,
             SLOT(onSystemLanguageChanged()));
     // This is only available in Debug builds
