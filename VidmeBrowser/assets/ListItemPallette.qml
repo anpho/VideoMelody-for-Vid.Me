@@ -16,7 +16,7 @@ ListItemComponent {
                         imageSource: "asset:///icon/ic_share.png"
                     },
                     ActionItem {
-                        title: qsTr("Open Via...")
+                        title: qsTr("Open With...")
                         imageSource: "asset:///icon/ic_forward.png"
                         onTriggered: {
                             var videourl = ListItemData.complete_url
