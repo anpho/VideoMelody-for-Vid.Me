@@ -59,6 +59,9 @@ public:
     Q_INVOKABLE void resetShowNsfwCOVER();
     Q_INVOKABLE void setShowNsfwCOVER(bool newvalue);
     Q_INVOKABLE bool getShowNsfwCOVER();
+    QString clientid;
+    QString clientsecret;
+    QString redirecturl;
 private slots:
     void onSystemLanguageChanged();
     void onSHAREArmed();

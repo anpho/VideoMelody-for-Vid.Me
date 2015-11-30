@@ -39,6 +39,7 @@ config_pri_assets {
         $$quote($$BASEDIR/assets/AboutPage.qml) \
         $$quote($$BASEDIR/assets/Common.qml) \
         $$quote($$BASEDIR/assets/ListItemPallette.qml) \
+        $$quote($$BASEDIR/assets/LoginSheet.qml) \
         $$quote($$BASEDIR/assets/NearbyView.qml) \
         $$quote($$BASEDIR/assets/SearchResultView.qml) \
         $$quote($$BASEDIR/assets/SearchView.qml) \

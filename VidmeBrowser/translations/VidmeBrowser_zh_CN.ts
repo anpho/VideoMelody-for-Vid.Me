@@ -101,6 +101,24 @@
     </message>
 </context>
 <context>
+    <name>LoginSheet</name>
+    <message>
+        <location filename="../assets/LoginSheet.qml" line="7"/>
+        <source>Login</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/LoginSheet.qml" line="9"/>
+        <source>Back</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/LoginSheet.qml" line="13"/>
+        <source>Register</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>SearchResultView</name>
     <message>
         <location filename="../assets/SearchResultView.qml" line="46"/>

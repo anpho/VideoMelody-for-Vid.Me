@@ -37,6 +37,9 @@ ApplicationUI::ApplicationUI() :
     m_pInvokeManager = new InvokeManager(this);
     resetShowNsfw();
     resetShowNsfwCOVER();
+    clientid = "aefb41b10e7d4a0bbd1eece7c38ab06e";
+    clientsecret = "a1f119e59ca376dc49c10ae7f0b8bc9739b6aa470671a05203abc1e708b79234";
+    redirecturl = "http://bbdev.cn/r.htm";
     bool res = QObject::connect(m_pLocaleHandler, SIGNAL(systemLanguageChanged()), this,
             SLOT(onSystemLanguageChanged()));
     // This is only available in Debug builds
@@ -177,7 +180,7 @@ void ApplicationUI::resetShowNsfwCOVER()
 }
 void ApplicationUI::setShowNsfwCOVER(bool newvalue)
 {
-    setv("use_nsfw_cover", newvalue?"true":"false");
+    setv("use_nsfw_cover", newvalue ? "true" : "false");
     resetShowNsfwCOVER();
 }
 bool ApplicationUI::getShowNsfwCOVER()
