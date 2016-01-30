@@ -21,7 +21,9 @@ import cn.anpho 1.0
 import bb.device 1.4
 TabbedPane {
     onCreationCompleted: {
+        // CHECK IF PASSWORD IS SET
         if (_app.getv("password", "").length > 0) {
+            // PASSWORD REQUIRED SO POPUP A SHEET TO HIDE THE CONTENT
             var lock = Qt.createComponent("lock.qml").createObject(rootpane);
             lock.open();
         }
@@ -29,12 +31,14 @@ TabbedPane {
     Menu.definition: MenuDefinition {
         helpAction: HelpActionItem {
             onTriggered: {
+                // OPEN ABOUT PAGE
                 var aboutpage = Qt.createComponent("AboutPage.qml").createObject(currentNavpane);
                 currentNavpane.push(aboutpage)
             }
         }
         settingsAction: SettingsActionItem {
             onTriggered: {
+                // OPEN SETTINGS PAGE
                 var settingspage = Qt.createComponent("SettingsPage.qml").createObject(currentNavpane);
                 currentNavpane.push(settingspage)
             }
@@ -44,6 +48,7 @@ TabbedPane {
                 title: qsTr("Rate")
                 imageSource: "asset:///icon/ic_edit_bookmarks.png"
                 onTriggered: {
+                    // OPEN BLACKBERRY WORLD
                     Qt.openUrlExternally("appworld://content/59983323");
                 }
             },
@@ -51,6 +56,7 @@ TabbedPane {
                 title: qsTr("Lock")
                 imageSource: "asset:///icon/ic_lock.png"
                 onTriggered: {
+                    // LOCK APP, SHOW THE PASSWORD SHEET
                     if (_app.getv("password", "").length > 0) {
                         var lock = Qt.createComponent("lock.qml").createObject(rootpane);
                         lock.open();
@@ -67,6 +73,8 @@ TabbedPane {
     attachedObjects: [
         SystemToast {
             id: sst
+            modality: SystemUiModality.Global
+            icon: "asset:///icon/ic_info.png"
         },
         DisplayInfo {
             id: di
@@ -140,67 +148,85 @@ TabbedPane {
                 }
                 property bool showloadingTips: listview_featured.loading || listview_hot.loading || listview_trending.loading
                 Container {
-                    layout: DockLayout {
-
-                    }
+                    verticalAlignment: VerticalAlignment.Fill
+                    horizontalAlignment: HorizontalAlignment.Fill
                     Container {
-                        verticalAlignment: VerticalAlignment.Fill
-                        horizontalAlignment: HorizontalAlignment.Fill
-                        VListView {
-                            visible: op_featured.selected
-                            onVisibleChanged: {
-                                if (visible) {
-                                    listview_featured.scrollRole = ScrollRole.Main
-                                } else {
-                                    listview_featured.scrollRole = ScrollRole.Default
-                                }
-                            }
-                            baseurl: "https://api.vid.me/videos/featured?offset="
-                            id: listview_featured
-                            onToast: {
-
-                            }
-                        }
-
-                        VListView {
-                            visible: op_hot.selected
-                            onVisibleChanged: {
-                                if (visible) {
-                                    listview_hot.scrollRole = ScrollRole.Main
-                                } else {
-                                    listview_hot.scrollRole = ScrollRole.Default
-                                }
-                            }
-                            id: listview_hot
-                            baseurl: "https://api.vid.me/videos/hot?offset="
-                            onToast: {
-
-                            }
-
-                        }
-
-                        VListView {
-                            id: listview_trending
-                            baseurl: "https://api.vid.me/videos/trending?offset="
-                            onToast: {
-
-                            }
-                            visible: op_trending.selected
-                            onVisibleChanged: {
-                                if (visible) {
-                                    listview_trending.scrollRole = ScrollRole.Main
-                                } else {
-                                    listview_trending.scrollRole = ScrollRole.Default
-                                }
-                            }
-                        }
-                    }
-                    ActivityIndicator {
-                        running: true
-                        verticalAlignment: VerticalAlignment.Fill
-                        horizontalAlignment: HorizontalAlignment.Fill
                         visible: page_browse.showloadingTips
+                        horizontalAlignment: HorizontalAlignment.Fill
+                        layout: DockLayout {
+
+                        }
+                        Container {
+                            horizontalAlignment: HorizontalAlignment.Center
+                            verticalAlignment: VerticalAlignment.Center
+                            layout: StackLayout {
+                                orientation: LayoutOrientation.LeftToRight
+                            }
+                            ActivityIndicator {
+                                running: true
+                                verticalAlignment: VerticalAlignment.Center
+                            }
+                            Label {
+                                text: qsTr("Loading...")
+                                verticalAlignment: VerticalAlignment.Center
+                            }
+                        }
                     }
+                    VListView {
+                        visible: op_featured.selected
+                        onVisibleChanged: {
+                            if (visible) {
+                                listview_featured.scrollRole = ScrollRole.Main
+                            } else {
+                                listview_featured.scrollRole = ScrollRole.Default
+                            }
+                        }
+                        baseurl: "https://api.vid.me/videos/featured?offset="
+                        id: listview_featured
+                        onToast: {
+                            errorToast(msg);
+                        }
+                        nav: nav_browse
+                        horizontalAlignment: HorizontalAlignment.Fill
+                    }
+
+                    VListView {
+                        visible: op_hot.selected
+                        onVisibleChanged: {
+                            if (visible) {
+                                listview_hot.scrollRole = ScrollRole.Main
+                            } else {
+                                listview_hot.scrollRole = ScrollRole.Default
+                            }
+                        }
+                        id: listview_hot
+                        baseurl: "https://api.vid.me/videos/hot?offset="
+                        onToast: {
+                            errorToast(msg);
+                        }
+                        nav: nav_browse
+                        horizontalAlignment: HorizontalAlignment.Fill
+
+                    }
+
+                    VListView {
+                        id: listview_trending
+                        baseurl: "https://api.vid.me/videos/trending?offset="
+                        onToast: {
+                            errorToast(msg);
+                        }
+                        visible: op_trending.selected
+                        onVisibleChanged: {
+                            if (visible) {
+                                listview_trending.scrollRole = ScrollRole.Main
+                            } else {
+                                listview_trending.scrollRole = ScrollRole.Default
+                            }
+                        }
+                        nav: nav_browse
+                        horizontalAlignment: HorizontalAlignment.Fill
+                    }
+
                 }
             }
         }
@@ -244,8 +270,7 @@ TabbedPane {
         property alias tabnav: nav_nearby
         title: qsTr("Nearby")
         imageSource: "asset:///icon/ic_map.png"
-        enabled: false
-        description: qsTr("Coming Soon")
+        description: qsTr("Beta")
         NavigationPane {
             id: nav_nearby
             onPushTransitionEnded: {
@@ -259,7 +284,8 @@ TabbedPane {
                     page.setActive();
                 }
             }
-            Page {
+            NearbyView {
+                nav: nav_nearby
 
             }
         }

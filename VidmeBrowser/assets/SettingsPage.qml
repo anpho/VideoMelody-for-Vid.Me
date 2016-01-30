@@ -2,6 +2,9 @@ import bb.cascades 1.4
 import cn.anpho 1.0
 import bb.system 1.2
 Page {
+    function setActive(){
+        scrview.scrollRole = ScrollRole.Main
+    }
     attachedObjects: [
         SystemToast {
             id: settings_toast
@@ -12,6 +15,7 @@ Page {
 
     }
     ScrollView {
+        id: scrview
         Container {
             Header {
                 title: qsTr("APPLICATION THEME")
@@ -55,6 +59,41 @@ Page {
 
                 }
             }
+            Container {
+                layout: StackLayout {
+                    orientation: LayoutOrientation.LeftToRight
+
+                }
+                topPadding: 20.0
+                leftPadding: 40.0
+                rightPadding: 40.0
+                bottomPadding: 20.0
+                Label {
+                    text: qsTr("Show Compact View")
+                    verticalAlignment: VerticalAlignment.Center
+                    layoutProperties: StackLayoutProperties {
+                        spaceQuota: 1.0
+                    }
+                }
+                ToggleButton {
+                    checked: _app.getv("compact", "false") == "true"
+                    onCheckedChanged: {
+                        _app.setv("compact", checked)
+                    }
+                }
+            }
+            Container {
+                leftPadding: 40.0
+                rightPadding: 40.0
+                bottomPadding: 20.0
+                Label {
+                    multiline: true
+                    text: qsTr("This will hide the statistics of each video.")
+                    textStyle.fontWeight: FontWeight.W100
+                    textStyle.fontSize: FontSize.XSmall
+
+                }
+            }
             Header {
                 title: qsTr("NSFW CONTENT FILTER")
             }
@@ -69,7 +108,7 @@ Page {
                 rightPadding: 40.0
                 bottomPadding: 20.0
                 Label {
-                    text: qsTr("Include NSFW Content")
+                    text: qsTr("Show NSFW Content")
                     verticalAlignment: VerticalAlignment.Center
                     layoutProperties: StackLayoutProperties {
                         spaceQuota: 1.0
@@ -205,41 +244,41 @@ Page {
                     }
                 }
             }
-//            Container {
-//                layout: StackLayout {
-//                    orientation: LayoutOrientation.LeftToRight
-//
-//                }
-//                topPadding: 20.0
-//                leftPadding: 40.0
-//                rightPadding: 40.0
-//                bottomPadding: 20.0
-//                Label {
-//                    text: qsTr("Lock When Minimized")
-//                    verticalAlignment: VerticalAlignment.Center
-//                    layoutProperties: StackLayoutProperties {
-//                        spaceQuota: 1.0
-//                    }
-//                }
-//                ToggleButton {
-//                    enabled: input_password.text.length > 0
-//                    checked: _app.getv("autolock", "false") === "true"
-//                    onCheckedChanged: {
-//                        _app.setv("autolock", checked);
-//                    }
-//                }
-//            }
-//            Container {
-//                leftPadding: 40.0
-//                rightPadding: 40.0
-//                bottomPadding: 20.0
-//                Label {
-//                    multiline: true
-//                    text: qsTr("Lock this app automatically when it's minimized. Password is required for this to take action.")
-//                    textStyle.fontWeight: FontWeight.W100
-//                    textStyle.fontSize: FontSize.XSmall
-//                }
-//            }
+            //            Container {
+            //                layout: StackLayout {
+            //                    orientation: LayoutOrientation.LeftToRight
+            //
+            //                }
+            //                topPadding: 20.0
+            //                leftPadding: 40.0
+            //                rightPadding: 40.0
+            //                bottomPadding: 20.0
+            //                Label {
+            //                    text: qsTr("Lock When Minimized")
+            //                    verticalAlignment: VerticalAlignment.Center
+            //                    layoutProperties: StackLayoutProperties {
+            //                        spaceQuota: 1.0
+            //                    }
+            //                }
+            //                ToggleButton {
+            //                    enabled: input_password.text.length > 0
+            //                    checked: _app.getv("autolock", "false") === "true"
+            //                    onCheckedChanged: {
+            //                        _app.setv("autolock", checked);
+            //                    }
+            //                }
+            //            }
+            //            Container {
+            //                leftPadding: 40.0
+            //                rightPadding: 40.0
+            //                bottomPadding: 20.0
+            //                Label {
+            //                    multiline: true
+            //                    text: qsTr("Lock this app automatically when it's minimized. Password is required for this to take action.")
+            //                    textStyle.fontWeight: FontWeight.W100
+            //                    textStyle.fontSize: FontSize.XSmall
+            //                }
+            //            }
             Header {
                 title: qsTr("ADVANCED FEATURES")
             }

@@ -13,5 +13,8 @@
 <file>assets/VideoDetails.qml</file>
 <file>assets/VListView.qml</file>
 <file>assets/cover.qml</file>
+<file>assets/PTR.qml</file>
+<file>assets/CommentListView.qml</file>
+<file>assets/CommentListComponent.qml</file>
 </qresource>
 </RCC>

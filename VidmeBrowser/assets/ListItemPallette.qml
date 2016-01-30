@@ -27,7 +27,10 @@ ListItemComponent {
             }
         ]
         id: itemroot
-        property bool display_details: true
+        function requestDetailsView() {
+            itemroot.ListItem.view.requestVideoDetails(JSON.stringify(ListItemData));
+        }
+        property bool display_details: itemroot.ListItem.view.showCompactView
         topPadding: 10.0
         leftPadding: 10.0
         bottomPadding: 10.0
@@ -120,6 +123,11 @@ ListItemComponent {
         // video area ended.
         // title begin
         Container {
+            gestureHandlers: TapHandler {
+                onTapped: {
+                    itemroot.requestDetailsView();
+                }
+            }
             Label {
                 text: ListItemData.title
                 textStyle.fontSize: FontSize.XLarge
@@ -130,14 +138,15 @@ ListItemComponent {
             Label {
                 text: ListItemData.description ? ListItemData.description : ""
                 textStyle.fontWeight: FontWeight.W100
-                visible: text.length > 0
+                visible: text.length > 0 && ! itemroot.display_details
                 multiline: true
+                textFormat: TextFormat.Html
             }
         }
         //title end
         // bottom area
         Container {
-            visible: display_details
+            visible: ! itemroot.display_details
             layout: StackLayout {
                 orientation: LayoutOrientation.LeftToRight
             }

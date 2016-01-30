@@ -4,10 +4,24 @@ BASEDIR = $$quote($$_PRO_FILE_PWD_)
 device {
     CONFIG(debug, debug|release) {
         profile {
+            INCLUDEPATH += $$quote(${QNX_TARGET}/usr/include/QtLocationSubset)
+
+            DEPENDPATH += $$quote(${QNX_TARGET}/usr/include/QtLocationSubset)
+
+            LIBS += -lQtLocationSubset \
+                -llocation_manager
+
             CONFIG += \
                 config_pri_assets \
                 config_pri_source_group1
         } else {
+            INCLUDEPATH += $$quote(${QNX_TARGET}/usr/include/QtLocationSubset)
+
+            DEPENDPATH += $$quote(${QNX_TARGET}/usr/include/QtLocationSubset)
+
+            LIBS += -lQtLocationSubset \
+                -llocation_manager
+
             CONFIG += \
                 config_pri_assets \
                 config_pri_source_group1
@@ -17,6 +31,13 @@ device {
 
     CONFIG(release, debug|release) {
         !profile {
+            INCLUDEPATH += $$quote(${QNX_TARGET}/usr/include/QtLocationSubset)
+
+            DEPENDPATH += $$quote(${QNX_TARGET}/usr/include/QtLocationSubset)
+
+            LIBS += -lQtLocationSubset \
+                -llocation_manager
+
             CONFIG += \
                 config_pri_assets \
                 config_pri_source_group1
@@ -27,6 +48,13 @@ device {
 simulator {
     CONFIG(debug, debug|release) {
         !profile {
+            INCLUDEPATH += $$quote(${QNX_TARGET}/usr/include/QtLocationSubset)
+
+            DEPENDPATH += $$quote(${QNX_TARGET}/usr/include/QtLocationSubset)
+
+            LIBS += -lQtLocationSubset \
+                -llocation_manager
+
             CONFIG += \
                 config_pri_assets \
                 config_pri_source_group1
@@ -37,16 +65,19 @@ simulator {
 config_pri_assets {
     OTHER_FILES += \
         $$quote($$BASEDIR/assets/AboutPage.qml) \
+        $$quote($$BASEDIR/assets/CommentListComponent.qml) \
+        $$quote($$BASEDIR/assets/CommentListView.qml) \
         $$quote($$BASEDIR/assets/Common.qml) \
         $$quote($$BASEDIR/assets/ListItemPallette.qml) \
-        $$quote($$BASEDIR/assets/LoginSheet.qml) \
         $$quote($$BASEDIR/assets/NearbyView.qml) \
+        $$quote($$BASEDIR/assets/PTR.qml) \
         $$quote($$BASEDIR/assets/SearchResultView.qml) \
         $$quote($$BASEDIR/assets/SearchView.qml) \
         $$quote($$BASEDIR/assets/SettingsPage.qml) \
         $$quote($$BASEDIR/assets/VListView.qml) \
         $$quote($$BASEDIR/assets/VideoDetails.qml) \
         $$quote($$BASEDIR/assets/cover.qml) \
+        $$quote($$BASEDIR/assets/icon/down.png) \
         $$quote($$BASEDIR/assets/icon/ic_browser.png) \
         $$quote($$BASEDIR/assets/icon/ic_copy_link.png) \
         $$quote($$BASEDIR/assets/icon/ic_edit_bookmarks.png) \
